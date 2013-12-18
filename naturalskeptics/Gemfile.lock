@@ -28,7 +28,10 @@ GEM
     activesupport (3.2.14)
       i18n (~> 0.6, >= 0.6.4)
       multi_json (~> 1.0)
+    annotate (2.5.0)
+      rake
     arel (3.0.3)
+    binToDec (0.0.71)
     builder (3.0.4)
     coffee-rails (3.2.2)
       coffee-script (>= 2.2.0)
@@ -39,12 +42,18 @@ GEM
     coffee-script-source (1.6.3)
     erubis (2.7.0)
     execjs (2.0.2)
+    faker (1.2.0)
+      i18n (~> 0.5)
+    foundation-rails (5.0.2.0)
+      railties (>= 3.1.0)
+      sass (>= 3.2.0)
     hike (1.2.3)
     i18n (0.6.9)
     journey (1.0.4)
     jquery-rails (3.0.4)
       railties (>= 3.0, < 5.0)
       thor (>= 0.14, < 2.0)
+    jscalc (0.1.4)
     json (1.8.1)
     mail (2.5.4)
       mime-types (~> 1.16)
@@ -52,6 +61,7 @@ GEM
     mime-types (1.25.1)
     multi_json (1.8.2)
     polyglot (0.3.3)
+    priceMarkup (0.0.4)
     rack (1.4.5)
     rack-cache (1.2)
       rack (>= 0.4)
@@ -97,14 +107,22 @@ GEM
     uglifier (2.3.3)
       execjs (>= 0.3.0)
       json (>= 1.8.0)
+    will_paginate (3.0.5)
 
 PLATFORMS
   ruby
 
 DEPENDENCIES
+  annotate
+  binToDec (~> 0.0.8)
   coffee-rails (~> 3.2.1)
+  faker
+  foundation-rails
   jquery-rails
+  jscalc (~> 0.1.4)
+  priceMarkup (~> 0.0.4)
   rails (= 3.2.14)
   sass-rails (~> 3.2.3)
   sqlite3
   uglifier (>= 1.0.3)
+  will_paginate

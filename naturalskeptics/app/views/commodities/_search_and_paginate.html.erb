@@ -1,0 +1,42 @@
+<div class="flickr_pagination">
+  <%= will_paginate @users %>
+</div>
+<br />
+<div class="tgd">
+  <p>Search by:</p>
+  <%= form_tag commodities_path, :method => 'get' do %>
+
+      <%= radio_button_tag(:search, "search_all", true) %>
+      <%= label_tag(:search_all, "All") %>
+
+      <%= radio_button_tag(:search,  "search_name") %>
+      <%= label_tag(:search_model, "Name") %>
+
+      <%= radio_button_tag(:search, "search_category") %>
+      <%= label_tag(:search_category, "Category") %>
+
+      <%= radio_button_tag(:search, "search_description") %>
+      <%= label_tag(:search_description, "Description") %>
+
+      <p>
+        <%= text_field_tag :search_query, params[:search_query] %>
+        <%= submit_tag "Search", :name => nil,:class => "button " %>
+      </p>
+  <% end %>
+
+  <%  if @commodities.empty? %>
+      <p><%= render :text => "Could not find any results for #{params[:search_query]}" %></p>
+  <% end %>
+
+</div>
+
+
+
+<%#= form_tag commodities_path, :method => 'get' do %>
+    <!--<p>-->
+      <%#= text_field_tag :search_query,
+                         params[:search_query] %>
+      <%#= submit_tag "Search", :name => nil,
+                     :class => "button"%>
+    <!--</p>-->
+<%# end  %>

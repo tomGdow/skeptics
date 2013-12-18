@@ -1,0 +1,42 @@
+<h1>Listing commodities</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Description</th>
+    <th>Cost Price</th>
+    <th>Selling Price</th>
+    <th>Category</th>
+    <th>Image url</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+  <% @commodities.each do |commodity| %>
+      <tr>
+        <td><%= commodity.name %></td>
+        <td><%= truncate(commodity.description, length: 45) %></td>
+        <td><%= commodity.price %></td>
+        <td><%= Dowstore
+                .priceMarkup(commodity.price, 0.45,2) %></td>
+        <td><%= commodity.category %></td>
+        <td><%= image_tag(commodity.image_url) %></td>
+        <td><%= link_to 'Show', commodity,
+                        :class => "button success tiny " %></td>
+        <td><%= link_to 'Edit', edit_commodity_path(commodity),
+                         :class => "button secondary tiny "%></td>
+        <td><%= link_to 'Destroy',
+                         commodity, method: :delete, data:
+                         {confirm: 'Are you sure?'},
+                         :class => "button alert tiny "%></td>
+      </tr>
+  <% end %>
+</table>
+
+
+    <%= render partial: 'commodities/search_and_paginate' %>
+
+
+    <%= link_to 'New Commodity', new_commodity_path,
+                             :class => "button success " %>

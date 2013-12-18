@@ -6,6 +6,16 @@ gem 'rails', '3.2.14'
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
 gem 'sqlite3'
+gem 'annotate'
+gem 'faker'
+gem 'will_paginate'
+gem 'foundation-rails'
+
+#Gems created by tomDowling
+gem "jscalc", "~> 0.1.4"
+gem "priceMarkup", "~> 0.0.4"
+gem "binToDec", "~> 0.0.8"
+
 
 
 # Gems used only for assets and not required
