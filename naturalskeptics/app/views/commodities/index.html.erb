@@ -1,3 +1,4 @@
+<p id="notice"><%= notice %></p>
 <h1>Listing commodities</h1>
 
 <table>
@@ -23,13 +24,16 @@
         <td><%= commodity.category %></td>
         <td><%= image_tag(commodity.image_url) %></td>
         <td><%= link_to 'Show', commodity,
-                        :class => "button success tiny " %></td>
+                        :class => "button secondary tiny " %></td>
         <td><%= link_to 'Edit', edit_commodity_path(commodity),
                          :class => "button secondary tiny "%></td>
         <td><%= link_to 'Destroy',
                          commodity, method: :delete, data:
                          {confirm: 'Are you sure?'},
                          :class => "button alert tiny "%></td>
+        <td><%= button_to 'Add to Cart',
+                          line_items_path(:commodity_id => commodity),
+                          :class => "button success tiny 5 radius "%></td>
       </tr>
   <% end %>
 </table>

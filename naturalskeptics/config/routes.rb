@@ -1,8 +1,13 @@
 Naturalskeptics::Application.routes.draw do
+
+  resources :line_items
+  resources :carts
   resources :commodities
 
 
   get "home/index"
+
+  match '/your_cart' => "carts#your_cart", :as => "your_cart"
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

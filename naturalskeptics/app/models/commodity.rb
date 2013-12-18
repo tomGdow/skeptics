@@ -1,12 +1,14 @@
 class Commodity < ActiveRecord::Base
   attr_accessible :description, :image_url, :name, :price, :category
 
+  has_many :line_items
+
 
   def self.search(search_query, search)
 
     case search
 
-      when  "search_name"
+      when "search_name"
         find :all, conditions: ["commodities.name LIKE ?", "%#{search_query}%"]
 
       when "search_category"
@@ -15,7 +17,7 @@ class Commodity < ActiveRecord::Base
       when "search_description"
         find :all, conditions: ["description LIKE ?", "%#{search_query}%"]
 
-      when  "search_all"
+      when "search_all"
         find :all, conditions: ["name LIKE ? OR category LIKE ? OR price LIKE ? OR description LIKE ?",
                                 "%#{search_query}%",
                                 "%#{search_query}%",
@@ -27,7 +29,6 @@ class Commodity < ActiveRecord::Base
   end
 
 end
-
 
 
 =begin

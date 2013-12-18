@@ -1,0 +1,19 @@
+<p id = "notice"><%= notice %></p>
+<h2>Your Cart</h2>
+<ul>
+  <% for item in @cart.line_items %>
+      <li><%= item.quantity %> &times;
+          <%= item.commodity.name %>
+          <%= number_to_currency(item.commodity.price,
+                                 :unit => '&euro;', precision: 0)%>
+          <%=  number_to_currency(item.total_price_lineItem,
+                                  :unit => '&euro;', precision: 0) %> </li>
+   <% end %>
+  Total Price: <%= number_to_currency(@cart.total_price, :unit => '&euro;') %><br />
+</ul>
+
+ <p> <%= button_to 'Empty cart', @cart, :method => :delete,
+                                        :confirm => 'Are you sure?',
+                                        :class => "button success small 5 radius "%></p>
+<%= link_to 'Edit', edit_cart_path(@cart) %> |
+<%= link_to 'Back', carts_path %>
