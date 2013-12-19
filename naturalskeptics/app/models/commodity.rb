@@ -30,7 +30,6 @@ class Commodity < ActiveRecord::Base
 
 end
 
-
 =begin
   def self.search(search_query)
     if search_query

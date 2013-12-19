@@ -2,6 +2,7 @@ class CommoditiesController < ApplicationController
   # GET /commodities
   # GET /commodities.json
   def index
+    @cart=current_cart
     @commodities = Commodity.paginate(:per_page => 5,
                            :page => params[:page],
                            :order => "created_at DESC")

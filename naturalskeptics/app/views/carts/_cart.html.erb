@@ -1,0 +1,23 @@
+<h2 id = "cartheader">Your Cart </h2>
+
+<table>
+   <td></td>
+  <td></td>
+  <td>Unit Price</td>
+  <%= render(cart.line_items) %>
+   <tr></tr>
+ <tr>
+   <td>Total Price</td><td></td> <td></td>
+  <td> <%= number_to_currency(cart.total_price, :unit => '&euro;',precision: 0) %> </td>   </tr>
+</table>
+
+
+<%= button_to 'Empty cart', @cart, :method => :delete,
+                                   :id => "emptycartbutton",
+                                   :confirm => 'Are you sure?',
+                                   :class => "button secondary tiny "%>
+<br />
+
+
+<br /><%= link_to 'Edit', edit_cart_path(@cart) %> |
+<%= link_to 'Back', carts_path %>

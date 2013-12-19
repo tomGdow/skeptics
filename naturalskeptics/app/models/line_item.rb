@@ -5,7 +5,17 @@ class LineItem < ActiveRecord::Base
   belongs_to :cart
 
   def total_price_lineItem
-    commodity.price * quantity
+
+
+   sales_price.to_f * quantity
   end
+
+
+  def sales_price
+
+    Dowstore.priceMarkup(commodity.price,0.45,2)
+  end
+
+
 
 end

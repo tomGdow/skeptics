@@ -5,9 +5,14 @@ Naturalskeptics::Application.routes.draw do
   resources :commodities
 
 
+
   get "home/index"
 
   match '/your_cart' => "carts#your_cart", :as => "your_cart"
+
+  match '/carts/remove/:id' => 'line_items#destroy'
+
+
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

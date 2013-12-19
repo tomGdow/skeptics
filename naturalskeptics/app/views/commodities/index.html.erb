@@ -1,6 +1,7 @@
 <p id="notice"><%= notice %></p>
 <h1>Listing commodities</h1>
 
+
 <table>
   <tr>
     <th>Name</th>
@@ -20,27 +21,28 @@
         <td><%= truncate(commodity.description, length: 45) %></td>
         <td><%= commodity.price %></td>
         <td><%= Dowstore
-                .priceMarkup(commodity.price, 0.45,2) %></td>
+                .priceMarkup(commodity.price, 0.45, 2) %></td>
         <td><%= commodity.category %></td>
         <td><%= image_tag(commodity.image_url) %></td>
         <td><%= link_to 'Show', commodity,
                         :class => "button secondary tiny " %></td>
         <td><%= link_to 'Edit', edit_commodity_path(commodity),
-                         :class => "button secondary tiny "%></td>
+                        :class => "button secondary tiny " %></td>
         <td><%= link_to 'Destroy',
-                         commodity, method: :delete, data:
-                         {confirm: 'Are you sure?'},
-                         :class => "button alert tiny "%></td>
+                        commodity, method: :delete, data:
+                        {confirm: 'Are you sure?'},
+                        :class => "button alert tiny " %></td>
         <td><%= button_to 'Add to Cart',
                           line_items_path(:commodity_id => commodity),
-                          :class => "button success tiny 5 radius "%></td>
+                          remote: true,
+                          :class => "button success tiny 5 radius " %></td>
       </tr>
   <% end %>
 </table>
 
 
-    <%= render partial: 'commodities/search_and_paginate' %>
+<%= render partial: 'commodities/search_and_paginate' %>
 
+<%= link_to 'New Commodity', new_commodity_path,
+            :class => "button right success " %>
 
-    <%= link_to 'New Commodity', new_commodity_path,
-                             :class => "button success " %>
