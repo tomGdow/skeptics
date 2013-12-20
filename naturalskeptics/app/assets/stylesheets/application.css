@@ -14,10 +14,14 @@
  *= require_tree .
  */
 
-#cart {background-color: #9CD2EA;
-    position:absolute;
-    top: 100px;
+#cart {
+    background-color: #9CD2EA;
+    position: absolute;
+    top:  60px;
     left: 10px;
-    z-index:20;}
+    z-index: 20;
+}
 
-#cartheader, #emptycartbutton {margin-left: 20px;}
+#cartheader,#emptyCartButton, #checkOutButton {
+    margin-left: 20px;
+}

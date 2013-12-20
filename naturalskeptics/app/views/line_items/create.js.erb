@@ -1,7 +1,8 @@
 $("#notice").hide();
 
-if ($('#cart tr').length == 1) { $('#cart').fadeIn(5000); }
+if ($('#cart tr').length == 2) { $('#cart').fadeIn(1000);}
 
 $('#cart').html("<%=j render @cart %>");
 
-$('#current_item').css({'background-color':'aqua'}).animate({'background-color':'#F9F9F9'}, 1000);
+$('#current_item').css({'background-color':'aqua'})
+                  .animate({'background-color':'#F9F9F9'}, 1000);
