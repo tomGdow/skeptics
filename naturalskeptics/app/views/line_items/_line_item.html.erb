@@ -4,7 +4,7 @@
         <tr>
 <% end %>
 
- <td><a  href="/carts/remove/<%= line_item.id%>">
+ <td><a  href="/carts/remove/<%= line_item.id%>" >
        <span class="has-tip" title="Remove Item">
          <%= line_item.quantity %> &times;<%= truncate(line_item.commodity.name, length: 20) %>
        </span>

@@ -1,6 +1,4 @@
 class OrdersController < ApplicationController
-  # GET /orders
-  # GET /orders.json
 
   def index
     @orders = Order.all
@@ -11,8 +9,6 @@ class OrdersController < ApplicationController
     end
   end
 
-  # GET /orders/1
-  # GET /orders/1.json
   def show
     @order = Order.find(params[:id])
 
@@ -22,9 +18,8 @@ class OrdersController < ApplicationController
     end
   end
 
-  # GET /orders/new
-  # GET /orders/new.json
   def new
+
     @cart = current_cart
 
     if @cart.line_items.empty?
@@ -37,17 +32,15 @@ class OrdersController < ApplicationController
 
     respond_to do |format|
       format.html # new.html.erb
+      format.js
       format.json { render json: @order }
     end
   end
 
-  # GET /orders/1/edit
   def edit
     @order = Order.find(params[:id])
   end
 
-  # POST /orders
-  # POST /orders.json
   def create
     @order = Order.new(params[:order])
     @order.add_line_items_from_cart(current_cart)
@@ -56,6 +49,7 @@ class OrdersController < ApplicationController
       if @order.save
         Cart.destroy(session[:cart_id])
         session[:cart_id] = nil
+        OrderNotifier.received(@order).deliver
         format.html { redirect_to commodities_url, notice: 'Thank you for your order' }
         format.json { render json: @order, status: :created, location: @order }
       else
@@ -66,8 +60,6 @@ class OrdersController < ApplicationController
     end
   end
 
-  # PUT /orders/1
-  # PUT /orders/1.json
   def update
     @order = Order.find(params[:id])
 
@@ -82,8 +74,6 @@ class OrdersController < ApplicationController
     end
   end
 
-  # DELETE /orders/1
-  # DELETE /orders/1.json
   def destroy
     @order = Order.find(params[:id])
     @order.destroy

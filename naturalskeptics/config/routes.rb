@@ -1,21 +1,18 @@
 Naturalskeptics::Application.routes.draw do
 
   resources :orders
-
-
   resources :line_items
   resources :carts
   resources :commodities
-
-
+  resources :home
 
   get "home/index"
-
+  get "home/mygems"
+  match '/mygems' => "home#mygems", :as => "mygems"
   match '/your_cart' => "carts#your_cart", :as => "your_cart"
-
   match '/carts/remove/:id' => 'line_items#destroy'
-
-
+  #match '/home/makeSmall' => 'home#makeSmall',:as => "makeSmall"
+  root :to => 'home#index'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
@@ -66,7 +63,7 @@ Naturalskeptics::Application.routes.draw do
 
   # You can have the root of your site routed with "root"
   # just remember to delete public/index.html.
-  root :to => 'home#index'
+
 
   # See how all your routes lay out with "rake routes"
 
