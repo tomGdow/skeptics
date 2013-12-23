@@ -1,7 +1,7 @@
 class HomeController < ApplicationController
 
   def index
-    @cart =current_cart
+    @cart = current_cart
   end
 
   def mygems
@@ -15,5 +15,9 @@ class HomeController < ApplicationController
     respond_to do |format|
       format.js
     end
+  end
+
+  def show
+    @cart = current_cart
   end
 end

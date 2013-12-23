@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 
 gem 'rails', '3.2.14'
-gem 'jquery-ui-rails'
+
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
@@ -11,6 +11,8 @@ gem 'annotate'
 gem 'faker'
 gem 'will_paginate'
 gem 'foundation-rails'
+gem 'jquery-ui-rails'
+gem 'devise'
 
 #Gems created by tomDowling
 gem "jscalc", "~> 0.1.4"

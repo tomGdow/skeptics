@@ -22,7 +22,7 @@
         <td><%= Dowstore
                 .priceMarkup(commodity.price, 0.45, 2) %></td>
         <td><%= commodity.category %></td>
-        <td><%= image_tag(commodity.image_url) %></td>
+        <td><%= image_tag(commodity.image_url, title: 'Add to Cart', class: 'links_list')  %></td>
         <td>
           <a href="#" data-dropdown="drop" class="button secondary tiny dropdown">
             More...</a>
@@ -30,8 +30,7 @@
           <ul id="drop" data-dropdown-content class="f-dropdown">
 
             <li><%= link_to 'Show', commodity, remote: true%></li>
-            <li><%= link_to 'Edit', edit_commodity_path(commodity),
-                            remote: true %></li>
+            <li><%= link_to 'Edit', edit_commodity_path(commodity), remote: true %></li>
             <li><%= link_to 'Destroy',
                             commodity, method: :delete, data:
                             {confirm: 'Are you sure?'} %></li>

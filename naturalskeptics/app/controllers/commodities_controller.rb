@@ -8,7 +8,7 @@ class CommoditiesController < ApplicationController
                            .search(params[:search_query], params[:search])
 
     respond_to do |format|
-      format.js
+      #format.js
       format.json { render json: @commodities }
       format.html
     end

@@ -1,5 +1,7 @@
 Naturalskeptics::Application.routes.draw do
 
+  devise_for :users
+
   resources :orders
   resources :line_items
   resources :carts
@@ -11,7 +13,7 @@ Naturalskeptics::Application.routes.draw do
   match '/mygems' => "home#mygems", :as => "mygems"
   match '/your_cart' => "carts#your_cart", :as => "your_cart"
   match '/carts/remove/:id' => 'line_items#destroy'
-  #match '/home/makeSmall' => 'home#makeSmall',:as => "makeSmall"
+
   root :to => 'home#index'
 
   # The priority is based upon order of creation:

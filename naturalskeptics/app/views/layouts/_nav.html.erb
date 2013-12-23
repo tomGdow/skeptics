@@ -2,7 +2,7 @@
   <ul class="title-area">
     <li class="name">
       <h1>
-        <%= link_to "Home", :controller => "home", :action => "index" %>
+        <%= link_to "Home", root_path %>
       </h1>
     </li>
   </ul>
@@ -21,7 +21,7 @@
     <!-- Left Nav Section -->
     <ul class="left">
       <li>
-        <%= link_to "Commodities", commodities_path, remote: true %>
+        <%= link_to "Commodities", commodities_path, remote: false %>
       </li>
       <li>
         <%= link_to "Gems", mygems_path, :class=> "ajaxClass"%>
