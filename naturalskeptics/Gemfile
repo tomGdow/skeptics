@@ -13,6 +13,9 @@ gem 'will_paginate'
 gem 'foundation-rails'
 gem 'jquery-ui-rails'
 gem 'devise'
+gem "nokogiri", "~> 1.6.1"
+gem 'faker'
+gem "gravatar_image_tag"
 
 #Gems created by tomDowling
 gem "jscalc", "~> 0.1.4"

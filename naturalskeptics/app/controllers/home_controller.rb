@@ -2,6 +2,7 @@ class HomeController < ApplicationController
 
   def index
     @cart = current_cart
+    @user = User.all
   end
 
   def mygems

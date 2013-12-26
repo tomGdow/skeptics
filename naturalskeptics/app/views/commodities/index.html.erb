@@ -1,13 +1,12 @@
 <p id="notice"><%= notice %></p>
 <h1>Listing commodities</h1>
-
 <table>
   <tr>
     <th>Name</th>
     <th>Description</th>
     <% if current_user and current_user.admin %>
-    <th>Cost Price</th>
-     <% end %>
+        <th>Cost Price</th>
+    <% end %>
     <th>Selling Price</th>
     <th>Category</th>
     <th>Image url</th>
@@ -22,63 +21,48 @@
         <td><%= truncate(commodity.description, length: 45) %></td>
 
         <% if current_user and current_user.admin %>
-        <td><%= commodity.price %></td>
+            <td><%= commodity.price %></td>
 
-            <% end %>
+        <% end %>
         <td><%= Dowstore
                 .priceMarkup(commodity.price, 0.45, 2) %></td>
         <td><%= commodity.category %></td>
-        <td><%= image_tag(commodity.image_url, title: 'Add to Cart', class: 'links_list')  %></td>
-
-
-          <td>
+        <td><%= image_tag(commodity.image_url,
+                          title: 'Add to Cart',
+                          class: 'links_list') %></td>
+        <td>
           <% if current_user and current_user.admin %>
               <!--show dropdown only if admin logged in-->
-          <a href="#" data-dropdown="drop" class="button secondary tiny dropdown">
-            More...</a>
-          <br>
-
+              <a href="#" data-dropdown="drop" class="button secondary tiny dropdown">
+                More...</a>
+              <br/>
               <ul id="drop" data-dropdown-content class="f-dropdown">
 
-                <li><%= link_to 'Show', commodity, remote: true%></li>
+                <li><%= link_to 'Show', commodity, remote: true %></li>
                 <li><%= link_to 'Edit', edit_commodity_path(commodity), remote: true %></li>
                 <li><%= link_to 'Destroy',
-                                commodity, method: :delete, data:
-                                {confirm: 'Are you sure?'} %></li>
-
-
+                                commodity,
+                                method: :delete,
+                                data: {confirm: 'Are you sure?'} %></li>
               </ul>
-
-
-            <% else %>
-
-                <%= link_to 'Show', commodity, remote: true, class: 'button secondary tiny'%>
-
-        <% end %>
-
-
-            </td>
-
-
-
-
-
-
-
-          <% if current_user %>
-           <td> <%= button_to 'Add to Cart',
-                          line_items_path(:commodity_id => commodity),
+          <% else %>
+              <%= link_to 'Show', commodity,
                           remote: true,
-                          :class => "button success tiny 5 radius " %>
-           </td>
-              <% end %>
+                          class: 'button secondary tiny' %>
+          <% end %>
+        </td>
+        <% if current_user %>
+            <td> <%= button_to 'Add to Cart',
+                               line_items_path(:commodity_id => commodity),
+                               remote: true,
+                               :class => "button success tiny 5 radius " %>
+            </td>
+        <% end %>
       </tr>
   <% end %>
 </table>
 
-
 <%= render partial: 'commodities/search_and_paginate' %>
-
 <%= link_to 'New Commodity', new_commodity_path,
             :class => "button right success " %>
 

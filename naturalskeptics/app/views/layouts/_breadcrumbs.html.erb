@@ -1,4 +1,6 @@
 <ul class="breadcrumbs">
+
+
   <% if user_signed_in? %>
 
       <li><%= link_to 'Edit profile', edit_user_registration_path %> </li>
@@ -13,12 +15,16 @@
       <li><span class="notice"><%= notice %></span>
         <span class="alert"><%= alert %></span></li>
 
+      <span id ="gravatar"><%= render partial: 'layouts/gravatar' %></span>
+
   <% else %>
       <li><%= link_to "Sign up", new_user_registration_path %> </li>
       <li><%= link_to "Log in", new_user_session_path %> </li>
       <li><%= link_to "Forgot Password?",
                       new_password_path(resource_name) %></li>
   <% end %>
+
+
 </ul>
 
 

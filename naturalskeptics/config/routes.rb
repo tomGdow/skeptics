@@ -1,15 +1,19 @@
 Naturalskeptics::Application.routes.draw do
 
-  devise_for :users
+
+  devise_for :users, :controllers => {:registrations => "registrations"}
 
   resources :orders
   resources :line_items
   resources :carts
   resources :commodities
   resources :home
+  resources :xmlusers
 
   get "home/index"
   get "home/mygems"
+  get "xmlusers/index"
+
   match '/mygems' => "home#mygems", :as => "mygems"
   match '/your_cart' => "carts#your_cart", :as => "your_cart"
   match '/carts/remove/:id' => 'line_items#destroy'

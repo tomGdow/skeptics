@@ -1,0 +1,11 @@
+ <% if user_signed_in? %>
+
+   <%= gravatar_image_tag "#{current_user.email}",
+
+        :alt => "Gravatar image for #{current_user.email}",
+        :gravatar => { :secure => true},
+        :class => "mygravatar",
+        :gravatar => { :default => 'https://assets.github.com/images/gravatars/gravatar-140.png' },
+        :gravatar => { :size => 25 }  %>
+
+ <% end %>

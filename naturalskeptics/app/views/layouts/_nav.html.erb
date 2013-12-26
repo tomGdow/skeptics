@@ -24,8 +24,30 @@
         <%= link_to "Commodities", commodities_path, remote: false %>
       </li>
       <li>
-        <%= link_to "Gems", mygems_path, :class=> "ajaxClass"%>
+        <%= link_to "Gems", mygems_path, :class => "ajaxClass" %>
       </li>
+
+      <% if current_user and current_user.admin %>
+
+          <li>
+            <%= link_to "XML", xmlusers_path, remote: false %>
+          </li>
+
+
+
+      <li class="has-dropdown">
+        <%= link_to "Users XML View", xmlusers_path, remote: false %>
+        <ul class="dropdown">
+          <li>
+            <%= link_to "Dynamic XML", xmlusers_path, remote: false %>
+          </li>
+          <li>
+            <%= link_to("XML file", "/xmlNewUsers.xml",
+                        :target => '_blank') %>
+          </li>
+        </ul>
+      </li>
+      <% end %>
     </ul>
   </section>
 </nav>
