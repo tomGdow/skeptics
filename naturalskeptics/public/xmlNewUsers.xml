@@ -1,7 +1,5 @@
 <?xml version="1.0"?>
-
 <?xml-stylesheet type="text/xsl" href="xmlNewUsers.xsl"?>
-
 <!DOCTYPE root [
 <!ELEMENT root (myUsers)*>
 <!ELEMENT myUsers (email | userID | createdAT | updatedAT | signInCount | currSignInAt | lastSignInAt | currSignInIP | lastSignInIP)*>
@@ -17,24 +15,277 @@
 ]>
 <root>
   <myUsers>
-    <email>clivevillian@gmail.com</email>
-    <userID>49</userID>
-    <createdAT>24 Dec. 2013</createdAT>
-    <updatedAT>24 Dec. 2013</updatedAT>
+    <email>adam@gmail.com</email>
+    <userID>75</userID>
+    <createdAT>27 Dec. 2013</createdAT>
+    <updatedAT>27 Dec. 2013</updatedAT>
     <signInCount>1</signInCount>
-    <currSignInAt>24 Dec. 2013</currSignInAt>
-    <lastSignInAt>24 Dec. 2013</lastSignInAt>
+    <currSignInAt>27 Dec. 2013</currSignInAt>
+    <lastSignInAt>27 Dec. 2013</lastSignInAt>
+    <currSignInIP>127.0.0.1</currSignInIP>
+    <lastSignInIP>127.0.0.1</lastSignInIP>
+  </myUsers>
+  <myUsers>
+    <email>billythekid@gmail.com</email>
+    <userID>76</userID>
+    <createdAT>27 Dec. 2013</createdAT>
+    <updatedAT>27 Dec. 2013</updatedAT>
+    <signInCount>1</signInCount>
+    <currSignInAt>27 Dec. 2013</currSignInAt>
+    <lastSignInAt>27 Dec. 2013</lastSignInAt>
+    <currSignInIP>127.0.0.1</currSignInIP>
+    <lastSignInIP>127.0.0.1</lastSignInIP>
+  </myUsers>
+  <myUsers>
+    <email>charlie@gmail.com</email>
+    <userID>77</userID>
+    <createdAT>27 Dec. 2013</createdAT>
+    <updatedAT>27 Dec. 2013</updatedAT>
+    <signInCount>1</signInCount>
+    <currSignInAt>27 Dec. 2013</currSignInAt>
+    <lastSignInAt>27 Dec. 2013</lastSignInAt>
+    <currSignInIP>127.0.0.1</currSignInIP>
+    <lastSignInIP>127.0.0.1</lastSignInIP>
+  </myUsers>
+  <myUsers>
+    <email>david@gmail.com</email>
+    <userID>78</userID>
+    <createdAT>27 Dec. 2013</createdAT>
+    <updatedAT>27 Dec. 2013</updatedAT>
+    <signInCount>1</signInCount>
+    <currSignInAt>27 Dec. 2013</currSignInAt>
+    <lastSignInAt>27 Dec. 2013</lastSignInAt>
+    <currSignInIP>127.0.0.1</currSignInIP>
+    <lastSignInIP>127.0.0.1</lastSignInIP>
+  </myUsers>
+  <myUsers>
+    <email>emma@gmail.com</email>
+    <userID>82</userID>
+    <createdAT>27 Dec. 2013</createdAT>
+    <updatedAT>27 Dec. 2013</updatedAT>
+    <signInCount>1</signInCount>
+    <currSignInAt>27 Dec. 2013</currSignInAt>
+    <lastSignInAt>27 Dec. 2013</lastSignInAt>
+    <currSignInIP>127.0.0.1</currSignInIP>
+    <lastSignInIP>127.0.0.1</lastSignInIP>
+  </myUsers>
+  <myUsers>
+    <email>eva@gmail.com</email>
+    <userID>79</userID>
+    <createdAT>27 Dec. 2013</createdAT>
+    <updatedAT>27 Dec. 2013</updatedAT>
+    <signInCount>1</signInCount>
+    <currSignInAt>27 Dec. 2013</currSignInAt>
+    <lastSignInAt>27 Dec. 2013</lastSignInAt>
+    <currSignInIP>127.0.0.1</currSignInIP>
+    <lastSignInIP>127.0.0.1</lastSignInIP>
+  </myUsers>
+  <myUsers>
+    <email>example-10@railstutorial.org</email>
+    <userID>65</userID>
+    <createdAT>27 Dec. 2013</createdAT>
+    <updatedAT>27 Dec. 2013</updatedAT>
+    <signInCount>1</signInCount>
+    <currSignInAt>27 Dec. 2013</currSignInAt>
+    <lastSignInAt>27 Dec. 2013</lastSignInAt>
+    <currSignInIP>127.0.0.1</currSignInIP>
+    <lastSignInIP>127.0.0.1</lastSignInIP>
+  </myUsers>
+  <myUsers>
+    <email>example-11@railstutorial.org</email>
+    <userID>66</userID>
+    <createdAT>27 Dec. 2013</createdAT>
+    <updatedAT>27 Dec. 2013</updatedAT>
+    <signInCount>1</signInCount>
+    <currSignInAt>27 Dec. 2013</currSignInAt>
+    <lastSignInAt>27 Dec. 2013</lastSignInAt>
+    <currSignInIP>127.0.0.1</currSignInIP>
+    <lastSignInIP>127.0.0.1</lastSignInIP>
+  </myUsers>
+  <myUsers>
+    <email>example-12@railstutorial.org</email>
+    <userID>67</userID>
+    <createdAT>27 Dec. 2013</createdAT>
+    <updatedAT>27 Dec. 2013</updatedAT>
+    <signInCount>1</signInCount>
+    <currSignInAt>27 Dec. 2013</currSignInAt>
+    <lastSignInAt>27 Dec. 2013</lastSignInAt>
+    <currSignInIP>127.0.0.1</currSignInIP>
+    <lastSignInIP>127.0.0.1</lastSignInIP>
+  </myUsers>
+  <myUsers>
+    <email>example-13@railstutorial.org</email>
+    <userID>68</userID>
+    <createdAT>27 Dec. 2013</createdAT>
+    <updatedAT>27 Dec. 2013</updatedAT>
+    <signInCount>1</signInCount>
+    <currSignInAt>27 Dec. 2013</currSignInAt>
+    <lastSignInAt>27 Dec. 2013</lastSignInAt>
+    <currSignInIP>127.0.0.1</currSignInIP>
+    <lastSignInIP>127.0.0.1</lastSignInIP>
+  </myUsers>
+  <myUsers>
+    <email>example-14@railstutorial.org</email>
+    <userID>69</userID>
+    <createdAT>27 Dec. 2013</createdAT>
+    <updatedAT>27 Dec. 2013</updatedAT>
+    <signInCount>1</signInCount>
+    <currSignInAt>27 Dec. 2013</currSignInAt>
+    <lastSignInAt>27 Dec. 2013</lastSignInAt>
+    <currSignInIP>127.0.0.1</currSignInIP>
+    <lastSignInIP>127.0.0.1</lastSignInIP>
+  </myUsers>
+  <myUsers>
+    <email>example-15@railstutorial.org</email>
+    <userID>70</userID>
+    <createdAT>27 Dec. 2013</createdAT>
+    <updatedAT>27 Dec. 2013</updatedAT>
+    <signInCount>1</signInCount>
+    <currSignInAt>27 Dec. 2013</currSignInAt>
+    <lastSignInAt>27 Dec. 2013</lastSignInAt>
+    <currSignInIP>127.0.0.1</currSignInIP>
+    <lastSignInIP>127.0.0.1</lastSignInIP>
+  </myUsers>
+  <myUsers>
+    <email>example-16@railstutorial.org</email>
+    <userID>71</userID>
+    <createdAT>27 Dec. 2013</createdAT>
+    <updatedAT>27 Dec. 2013</updatedAT>
+    <signInCount>1</signInCount>
+    <currSignInAt>27 Dec. 2013</currSignInAt>
+    <lastSignInAt>27 Dec. 2013</lastSignInAt>
+    <currSignInIP>127.0.0.1</currSignInIP>
+    <lastSignInIP>127.0.0.1</lastSignInIP>
+  </myUsers>
+  <myUsers>
+    <email>example-18@railstutorial.org</email>
+    <userID>72</userID>
+    <createdAT>27 Dec. 2013</createdAT>
+    <updatedAT>27 Dec. 2013</updatedAT>
+    <signInCount>1</signInCount>
+    <currSignInAt>27 Dec. 2013</currSignInAt>
+    <lastSignInAt>27 Dec. 2013</lastSignInAt>
+    <currSignInIP>127.0.0.1</currSignInIP>
+    <lastSignInIP>127.0.0.1</lastSignInIP>
+  </myUsers>
+  <myUsers>
+    <email>example-19@railstutorial.org</email>
+    <userID>73</userID>
+    <createdAT>27 Dec. 2013</createdAT>
+    <updatedAT>27 Dec. 2013</updatedAT>
+    <signInCount>1</signInCount>
+    <currSignInAt>27 Dec. 2013</currSignInAt>
+    <lastSignInAt>27 Dec. 2013</lastSignInAt>
     <currSignInIP>127.0.0.1</currSignInIP>
     <lastSignInIP>127.0.0.1</lastSignInIP>
   </myUsers>
   <myUsers>
     <email>example-1@railstutorial.org</email>
-    <userID>50</userID>
-    <createdAT>24 Dec. 2013</createdAT>
-    <updatedAT>24 Dec. 2013</updatedAT>
+    <userID>56</userID>
+    <createdAT>27 Dec. 2013</createdAT>
+    <updatedAT>27 Dec. 2013</updatedAT>
     <signInCount>1</signInCount>
-    <currSignInAt>24 Dec. 2013</currSignInAt>
-    <lastSignInAt>24 Dec. 2013</lastSignInAt>
+    <currSignInAt>27 Dec. 2013</currSignInAt>
+    <lastSignInAt>27 Dec. 2013</lastSignInAt>
+    <currSignInIP>127.0.0.1</currSignInIP>
+    <lastSignInIP>127.0.0.1</lastSignInIP>
+  </myUsers>
+  <myUsers>
+    <email>example-20@railstutorial.org</email>
+    <userID>74</userID>
+    <createdAT>27 Dec. 2013</createdAT>
+    <updatedAT>27 Dec. 2013</updatedAT>
+    <signInCount>1</signInCount>
+    <currSignInAt>27 Dec. 2013</currSignInAt>
+    <lastSignInAt>27 Dec. 2013</lastSignInAt>
+    <currSignInIP>127.0.0.1</currSignInIP>
+    <lastSignInIP>127.0.0.1</lastSignInIP>
+  </myUsers>
+  <myUsers>
+    <email>example-2@railstutorial.org</email>
+    <userID>57</userID>
+    <createdAT>27 Dec. 2013</createdAT>
+    <updatedAT>27 Dec. 2013</updatedAT>
+    <signInCount>1</signInCount>
+    <currSignInAt>27 Dec. 2013</currSignInAt>
+    <lastSignInAt>27 Dec. 2013</lastSignInAt>
+    <currSignInIP>127.0.0.1</currSignInIP>
+    <lastSignInIP>127.0.0.1</lastSignInIP>
+  </myUsers>
+  <myUsers>
+    <email>example-3@railstutorial.org</email>
+    <userID>58</userID>
+    <createdAT>27 Dec. 2013</createdAT>
+    <updatedAT>27 Dec. 2013</updatedAT>
+    <signInCount>1</signInCount>
+    <currSignInAt>27 Dec. 2013</currSignInAt>
+    <lastSignInAt>27 Dec. 2013</lastSignInAt>
+    <currSignInIP>127.0.0.1</currSignInIP>
+    <lastSignInIP>127.0.0.1</lastSignInIP>
+  </myUsers>
+  <myUsers>
+    <email>example-4@railstutorial.org</email>
+    <userID>59</userID>
+    <createdAT>27 Dec. 2013</createdAT>
+    <updatedAT>27 Dec. 2013</updatedAT>
+    <signInCount>1</signInCount>
+    <currSignInAt>27 Dec. 2013</currSignInAt>
+    <lastSignInAt>27 Dec. 2013</lastSignInAt>
+    <currSignInIP>127.0.0.1</currSignInIP>
+    <lastSignInIP>127.0.0.1</lastSignInIP>
+  </myUsers>
+  <myUsers>
+    <email>example-5@railstutorial.org</email>
+    <userID>60</userID>
+    <createdAT>27 Dec. 2013</createdAT>
+    <updatedAT>27 Dec. 2013</updatedAT>
+    <signInCount>1</signInCount>
+    <currSignInAt>27 Dec. 2013</currSignInAt>
+    <lastSignInAt>27 Dec. 2013</lastSignInAt>
+    <currSignInIP>127.0.0.1</currSignInIP>
+    <lastSignInIP>127.0.0.1</lastSignInIP>
+  </myUsers>
+  <myUsers>
+    <email>example-6@railstutorial.org</email>
+    <userID>61</userID>
+    <createdAT>27 Dec. 2013</createdAT>
+    <updatedAT>27 Dec. 2013</updatedAT>
+    <signInCount>1</signInCount>
+    <currSignInAt>27 Dec. 2013</currSignInAt>
+    <lastSignInAt>27 Dec. 2013</lastSignInAt>
+    <currSignInIP>127.0.0.1</currSignInIP>
+    <lastSignInIP>127.0.0.1</lastSignInIP>
+  </myUsers>
+  <myUsers>
+    <email>example-7@railstutorial.org</email>
+    <userID>62</userID>
+    <createdAT>27 Dec. 2013</createdAT>
+    <updatedAT>27 Dec. 2013</updatedAT>
+    <signInCount>1</signInCount>
+    <currSignInAt>27 Dec. 2013</currSignInAt>
+    <lastSignInAt>27 Dec. 2013</lastSignInAt>
+    <currSignInIP>127.0.0.1</currSignInIP>
+    <lastSignInIP>127.0.0.1</lastSignInIP>
+  </myUsers>
+  <myUsers>
+    <email>example-8@railstutorial.org</email>
+    <userID>63</userID>
+    <createdAT>27 Dec. 2013</createdAT>
+    <updatedAT>27 Dec. 2013</updatedAT>
+    <signInCount>1</signInCount>
+    <currSignInAt>27 Dec. 2013</currSignInAt>
+    <lastSignInAt>27 Dec. 2013</lastSignInAt>
+    <currSignInIP>127.0.0.1</currSignInIP>
+    <lastSignInIP>127.0.0.1</lastSignInIP>
+  </myUsers>
+  <myUsers>
+    <email>example-9@railstutorial.org</email>
+    <userID>64</userID>
+    <createdAT>27 Dec. 2013</createdAT>
+    <updatedAT>27 Dec. 2013</updatedAT>
+    <signInCount>1</signInCount>
+    <currSignInAt>27 Dec. 2013</currSignInAt>
+    <lastSignInAt>27 Dec. 2013</lastSignInAt>
     <currSignInIP>127.0.0.1</currSignInIP>
     <lastSignInIP>127.0.0.1</lastSignInIP>
   </myUsers>
@@ -46,6 +297,28 @@
     <signInCount>1</signInCount>
     <currSignInAt>25 Dec. 2013</currSignInAt>
     <lastSignInAt>25 Dec. 2013</lastSignInAt>
+    <currSignInIP>127.0.0.1</currSignInIP>
+    <lastSignInIP>127.0.0.1</lastSignInIP>
+  </myUsers>
+  <myUsers>
+    <email>tim@gmail.com</email>
+    <userID>81</userID>
+    <createdAT>27 Dec. 2013</createdAT>
+    <updatedAT>27 Dec. 2013</updatedAT>
+    <signInCount>1</signInCount>
+    <currSignInAt>27 Dec. 2013</currSignInAt>
+    <lastSignInAt>27 Dec. 2013</lastSignInAt>
+    <currSignInIP>127.0.0.1</currSignInIP>
+    <lastSignInIP>127.0.0.1</lastSignInIP>
+  </myUsers>
+  <myUsers>
+    <email>zara@gmail.com</email>
+    <userID>80</userID>
+    <createdAT>27 Dec. 2013</createdAT>
+    <updatedAT>27 Dec. 2013</updatedAT>
+    <signInCount>1</signInCount>
+    <currSignInAt>27 Dec. 2013</currSignInAt>
+    <lastSignInAt>27 Dec. 2013</lastSignInAt>
     <currSignInIP>127.0.0.1</currSignInIP>
     <lastSignInIP>127.0.0.1</lastSignInIP>
   </myUsers>

@@ -62,6 +62,7 @@ module TGD
     file.close
   end
 
+=begin
   def self.write_to_sorted_xml myfile
 
    myadd(@user.email,
@@ -76,6 +77,7 @@ module TGD
                File.join(Rails.root, 'public', myfile)
          )
   end
+=end
 
   #This function not used. May be used to write xml from def/index
   def  self.write_xml myvar, myfile

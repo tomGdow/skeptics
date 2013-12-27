@@ -38,7 +38,7 @@
 
 }
 
-#cartheader,
+.cartheader,
 #emptyCartButton,
 #smallerCartButton,
 #checkOutButton {
@@ -71,21 +71,9 @@
   box-shadow: 10px 10px 5px #888888;
 }
 
-//#userPicker {
-//  color: rgb(0, 120, 0);
-//  border-radius: 15px;
-//  box-shadow: 10px 10px 5px #888888;
-//  width: 80%;
-//  margin-left: 50px;
-//  margin-top: 100px;
-//  margin-bottom: 100px;
-//
-//}
-
-/*#showUserEntry {
-  margin: 50px;
-  height: 130px;
-}*/
+#userPicker {
+  z-index: 21;
+}
 
 .userButton {
   margin-bottom: 20px;
@@ -103,8 +91,28 @@
 
 }
 
-#gravatar { float:right;
+#gravatar {
+  float: right;
   margin-right: 20px;
 
 }
 
+#xmlusers {
+  margin-left: 50px;
+  margin-top: 20px;
+  margin-bottom: 40px;
+}
+
+#xmltable {
+  font-weight: bold;
+}
+
+#xmlTableHeaderLeft, #xmlTableHeaderRight {
+  width: 250px;
+  color: green;
+  background-color: #9CD2EA;
+}
+
+#MessageXML {
+  margin-left: 100px;
+}

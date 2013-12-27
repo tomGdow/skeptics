@@ -28,6 +28,10 @@ module ApplicationHelper
   def devise_mapping
     @devise_mapping ||= Devise.mappings[:user]
   end
+
+  def username
+    current_user.email.split('@').first.humanize
+  end
 end
 
 

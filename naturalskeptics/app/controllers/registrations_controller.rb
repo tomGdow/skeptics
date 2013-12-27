@@ -15,8 +15,8 @@ class RegistrationsController < Devise::RegistrationsController
 
       if @user.save
 
-        TGD.write_to_sorted_xml 'xmlNewUsers.xml'
-=begin
+        #TGD.write_to_sorted_xml 'xmlNewUsers.xml'
+
         TGD.myadd(@user.email,
               @user.id,
               @user.created_at.strftime("%d %b. %Y"),
@@ -28,7 +28,6 @@ class RegistrationsController < Devise::RegistrationsController
               @user.last_sign_in_ip,
               File.join(Rails.root, 'public', 'xmlNewUsers.xml')
         )
-=end
       end
   end
 
@@ -43,17 +42,6 @@ class RegistrationsController < Devise::RegistrationsController
 
   def show
     super
-    TGD.myadd(@user.email,
-              @user.id,
-              @user.created_at.strftime("%d %b. %Y"),
-              @user.updated_at.strftime("%d %b. %Y"),
-              @user.sign_in_count,
-              @user.current_sign_in_at.strftime("%d %b. %Y"),
-              @user.last_sign_in_at.strftime("%d %b. %Y"),
-              @user.current_sign_in_ip,
-              @user.last_sign_in_ip,
-              File.join(Rails.root, 'public', 'expt.xml')
-    )
   end
 
 

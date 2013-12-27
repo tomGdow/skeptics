@@ -2,6 +2,8 @@ var forwardButtonObject = document.getElementById('userButtonForward');
 var backButtonObject = document.getElementById('userButtonBack');
 var beginningButtonObject = document.getElementById('userButtonBeginning');
 var endButtonObject = document.getElementById('userButtonEnd');
+var minusFiveButtonObject = document.getElementById('userButtonMinusFive');
+var plusFiveButtonObject = document.getElementById('userButtonPlusFive');
 var xmlFileName;
 
 xmlFileName = "/xmlNewUsers.xml";
@@ -55,10 +57,7 @@ function displayUser() {
 
 }
 
-
-
-document.write(forwardButtonObject)
-
+//button functions
 function next() {
     if (i < x.length - 1) {
         i++;
@@ -81,6 +80,24 @@ function gotoend() {
     if (i >= 0) {
         i = (x.length - 1);
         displayUser();
+    }
+}
+
+function plusfive() {
+
+    if (i >= 0 && i < x.length -5) {
+        i = i + 5;
+        displayUser();
+
+    }
+}
+
+function minusfive() {
+
+    if (i >= 5 && i < x.length) {
+        i = i - 5;
+        displayUser();
+
     }
 }
 
@@ -115,5 +132,11 @@ beginningButtonObject.onclick = function () {
 };
 endButtonObject.onclick = function () {
     gotoend();
+};
+minusFiveButtonObject.onclick = function () {
+    minusfive();
+};
+plusFiveButtonObject.onclick = function () {
+   plusfive();
 };
 
