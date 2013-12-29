@@ -27,26 +27,41 @@
         <%= link_to "Gems", mygems_path, :class => "ajaxClass" %>
       </li>
 
-      <% if current_user and current_user.admin %>
+      <% if  current_user.present?%>
 
-          <li>
-            <%= link_to "XML", xmlusers_path, remote: false %>
-          </li>
+      <li>
+        <%= link_to "Profile", user_path(current_user.id), remote: false %></li>
 
-
-
+      <% end %>
       <li class="has-dropdown">
-        <%= link_to "Users XML View", xmlusers_path, remote: false %>
+        <%= link_to "Discussions", discussions_path, remote: false %>
         <ul class="dropdown">
-          <li>
-            <%= link_to "Dynamic XML", xmlusers_path, remote: false %>
-          </li>
-          <li>
-            <%= link_to("XML file", "/xmlNewUsers.xml",
-                        :target => '_blank') %>
-          </li>
+
+          <li><%= link_to "Index", discussions_path, remote: false %></li>
+          <li><%= link_to "Popper", discussion_path(8), remote: false %></li>
+          <li><%= link_to "Watson", discussion_path(10), remote: false %></li>
+          <li><%= link_to "Sanger", discussion_path(11), remote: false %></li>
+          <li><%= link_to "Crick", discussion_path(12), remote: false %></li>
+          <li><%= link_to "Pauling", discussion_path(13), remote: false %></li>
+          <li><%= link_to "Hodgkin", discussion_path(14), remote: false %></li>
+
         </ul>
       </li>
+
+      <% if current_user and current_user.admin %>
+
+          <li><%= link_to "XML", xmlusers_path, remote: false %></li>
+
+          <li class="has-dropdown"><%= link_to "Users XML View", xmlusers_path, remote: false %>
+            <ul class="dropdown">
+
+              <li><%= link_to "Dynamic XML", xmlusers_path, remote: false %></li>
+              <li><%= link_to("XML file", "/xmlNewUsers.xml",
+                            :target => '_blank') %> </li>
+            </ul>
+          </li>
+
+          <li><%= link_to "Comments", comments_path, remote: false %></li>
       <% end %>
     </ul>
   </section>

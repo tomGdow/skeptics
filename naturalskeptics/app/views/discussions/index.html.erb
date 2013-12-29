@@ -1,0 +1,30 @@
+<h1>Listing discussions</h1>
+
+<table>
+  <% @discussions.each do |discussion| %>
+      <tr>
+        <td>
+          <figure>
+            <%= link_to (image_tag discussion.photo.url(:thumb)), discussion %>
+
+          </figure>
+        </td>
+        <td><%= discussion.title %></td>
+        <td><%= discussion.introduction %></td>
+        <td><%= link_to 'Show', discussion, class: 'button secondary tiny' %></td>
+
+        <% if current_user and current_user.admin %>
+        <td><%= link_to 'Edit', edit_discussion_path(discussion), class: 'button success tiny' %></td>
+        <td><%= link_to 'Destroy', discussion, method: :delete, data: {confirm: 'Are you sure?'}, class: 'button alert tiny' %></td>
+         <% end %>
+
+      </tr>
+  <% end %>
+</table><br/>
+
+<%= render partial: 'discussions/search_and_paginate' %>
+
+<% if current_user and current_user.admin %>
+ <%= link_to 'New Discussion', new_discussion_path, class: "button success" %>
+ <% end %>
+

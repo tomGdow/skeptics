@@ -1,7 +1,7 @@
 Naturalskeptics::Application.routes.draw do
 
-
   devise_for :users, :controllers => {:registrations => "registrations"}
+
 
   resources :orders
   resources :line_items
@@ -9,10 +9,18 @@ Naturalskeptics::Application.routes.draw do
   resources :commodities
   resources :home
   resources :xmlusers
+  resources :comments
+  resources :discussions
+  resources :users
+
+  resources :discussions do
+    resources :comments
+  end
 
   get "home/index"
   get "home/mygems"
   get "xmlusers/index"
+
 
   match '/mygems' => "home#mygems", :as => "mygems"
   match '/your_cart' => "carts#your_cart", :as => "your_cart"
@@ -75,5 +83,5 @@ Naturalskeptics::Application.routes.draw do
 
   # This is a legacy wild controller route that's not recommended for RESTful applications.
   # Note: This route will make all actions in every controller accessible via GET requests.
-  # match ':controller(/:action(/:id))(.:format)'
+  #match ':controller(/:action(/:id))(.:format)'
 end

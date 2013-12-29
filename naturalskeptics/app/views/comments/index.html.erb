@@ -1,0 +1,52 @@
+<h1>Listing comments</h1>
+
+<table>
+  <tr>
+    <th>Text</th>
+    <th>Date</th>
+    <th>Time Posted</th>
+    <th>User Id</th>
+    <th>User Name</th>
+    <th> Discussion Id</th>
+    <th></th>
+    <th></th>
+  </tr>
+<% @comments.each do |comment| %>
+  <tr>
+    <td> <%= link_to truncate(comment.text, length: 25), comment %></td>
+    <td><%= comment.date %></td>
+    <td><%= link_to time_ago_in_words(comment.created_at) + " ago", comment %></td>
+    <td><%= comment.user_id %></td>
+    <td><%= comment.uname%></td>
+    <td><%= comment.discussion_id %></td>
+    <% unless comment.discussion.id.nil? %>
+        <td><%= link_to 'Comment Page',
+                        discussion_path(comment.discussion.id, anchor: 'comment'),
+                        class: "button success tiny"   %></td>
+    <%end %>
+    <td><%= link_to 'Show', comment, class: "button secondary tiny"%></td>
+
+    <% if current_user and current_user.admin %>
+    <td><%= link_to 'Edit', edit_comment_path(comment),
+                    class: "button success tiny" %></td>
+    <td><%= link_to 'Destroy', comment, method: :delete,
+                    data: { confirm: 'Are you sure?' },
+                    class: "button alert tiny"%></td>
+        <% end %>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= render partial: 'comments/will_paginate' %>
+
+<br/>
+
+<%= form_tag comments_path, :method => 'get' do %>
+    <p>
+    <p>  <%= text_field_tag :search_query, params[:search_query] %>    &nbsp;
+      <%= submit_tag "Search", :name => nil , class: "button success"%>
+    </p>
+<% end  %>
+

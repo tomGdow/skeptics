@@ -16,6 +16,7 @@ gem 'devise'
 gem "nokogiri", "~> 1.6.1"
 gem 'faker'
 gem "gravatar_image_tag"
+gem "paperclip", "~> 3.0"
 
 #Gems created by tomDowling
 gem "jscalc", "~> 0.1.4"
