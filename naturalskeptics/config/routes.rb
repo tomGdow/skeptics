@@ -1,5 +1,7 @@
 Naturalskeptics::Application.routes.draw do
 
+  get "jscalc/index"
+
   devise_for :users, :controllers => {:registrations => "registrations"}
 
 
@@ -20,6 +22,7 @@ Naturalskeptics::Application.routes.draw do
   get "home/index"
   get "home/mygems"
   get "xmlusers/index"
+  get "jscalc/index"
 
 
   match '/mygems' => "home#mygems", :as => "mygems"

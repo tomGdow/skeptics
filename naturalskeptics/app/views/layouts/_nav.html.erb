@@ -9,7 +9,7 @@
   <section class="top-bar-section"> <!-- Right Nav Section -->
     <ul class="right">
       <li class="active">
-        <a href="#">Right Nav Button Active</a>
+      <%= link_to "Calculator", "jscalc/index", remote: false %>
       </li>
       <li class="has-dropdown">
         <a href="#">Right Button with Dropdown</a>
@@ -44,6 +44,7 @@
           <li><%= link_to "Crick", discussion_path(12), remote: false %></li>
           <li><%= link_to "Pauling", discussion_path(13), remote: false %></li>
           <li><%= link_to "Hodgkin", discussion_path(14), remote: false %></li>
+
 
         </ul>
       </li>

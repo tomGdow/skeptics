@@ -1,2 +1,173 @@
-<h1>Home#mygems</h1>
-<p>Find me in app/views/home/mygems.html.erb</p>
+<h3>Binary to Decimal Converter
+  (<%= link_to "binToDec", "https://rubygems.org/gems/binToDec",
+               {:target => "_blank"} %>)
+</h3>
+ <br/>
+<h6><%= link_to "This gem", "https://rubygems.org/gems/binToDec",
+                {:target => "_blank"} %>
+   has been downloaded more than 750 times</h6>
+
+<h6>Once the gem is installed, the following functionality is available</h6>
+
+<xmp>
+  < %= Converter.binToDec(10) % >
+</xmp>
+
+<h6>An exception is thrown if the input is not binary</h6>
+     <br />
+<table>
+
+  <thead>
+  <tr>
+    <th width="150">Binary</th>
+    <th width="150">Decimal</th>
+    <th width="150">Binary</th>
+    <th width="150">Decimal</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr>
+    <td>10</td>
+    <td><%= Converter.binToDec(10) %></td>
+    <td>11</td>
+    <td><%= Converter.binToDec(11) %></td>
+  </tr>
+  <tr>
+    <td>1000</td>
+    <td><%= Converter.binToDec(1000) %></td>
+    <td>1111</td>
+    <td><%= Converter.binToDec(1111) %></td>
+  </tr>
+  <tr>
+    <td>10001</td>
+    <td><%= Converter.binToDec(10001) %></td>
+    <td>111111</td>
+    <td><%= Converter.binToDec(111111) %></td>
+  </tr>
+
+  <tr>
+    <td>10101010</td>
+    <td><%= Converter.binToDec(10101010) %></td>
+    <td>10001000</td>
+    <td><%= Converter.binToDec(10001000) %></td>
+  </tr>
+
+  <tr>
+    <td>1010111111</td>
+    <td><%= Converter.binToDec(1010111111) %></td>
+    <td>1000100011</td>
+    <td><%= Converter.binToDec(1000100011) %></td>
+  </tr>
+  </tbody>
+</table>
+
+<br/>
+<h3>Price Mark-Up
+  (<%= link_to "priceMarkup", "https://rubygems.org/gems/priceMarkup",
+               {:target => "_blank"} %>)
+</h3>
+<br/>
+<h6><%= link_to "This gem", "https://rubygems.org/gems/priceMarkup",
+                {:target => "_blank"} %>
+  has been downloaded more than 200 times</h6>
+
+<h6>Once the gem is installed, the following functionality is available</h6>
+
+<xmp>
+  Dowstore.priceMarkup(price, markup, decimal_places)
+
+</xmp>
+<h6>Examples of Usage</h6>
+<xmp>
+  Dowstore.priceMarkup(100) => "125"
+
+  Dowstore.priceMarkup(100, 2) => "300"
+
+  Dowstore.priceMarkup(100, 2, 3) => "300.000"
+
+  Dowstore.priceMarkup(100, 2.5556, 1) => "355.6"
+
+  Dowstore.priceMarkup(100.75, 2.5, 4) => "352.6250"
+
+  Dowstore.priceMarkup(100.75, 2.5, 0) => "353"
+</xmp>
+ <br />
+<table>
+
+  <thead>
+  <tr>
+    <th width="150">Cost Price</th>
+    <th width="150">Sales Price</th>
+    <th width="200">Comment</th>
+
+  </tr>
+  </thead>
+  <tbody>
+  <tr>
+    <td>100</td>
+    <td><%=Dowstore.priceMarkup(100, 2) %></td>
+    <td>Default Mark-up is 0.25</td>
+
+
+  </tr>
+
+  <tr>
+    <td>100</td>
+    <td><%=Dowstore.priceMarkup(100, 2) %></td>
+    <td>Change the default mark-up to 2</td>
+
+  </tr>
+
+  <tr>
+    <td>100</td>
+    <td><%= Dowstore.priceMarkup(100, 2, 3)  %></td>
+    <td>Change output decimal places to 3</td>
+
+  </tr>
+
+  <tr>
+    <td>100</td>
+    <td><%= Dowstore.priceMarkup(100, 2.5556, 1) %></td>
+    <td>Mark-up of 2.5556 and 1 decimal place</td>
+
+  </tr>
+
+  <tr>
+    <td>100.75</td>
+    <td><%= Dowstore.priceMarkup(100.75, 2.5, 4) %></td>
+    <td>Non-integer input, mark-up of 2.5556 and 4 decimal places</td>
+
+  </tr>
+
+  <tr>
+    <td>100.75</td>
+    <td><%= Dowstore.priceMarkup(100.75, 2.5, 0) %></td>
+    <td>Non-integer input, mark-up of 2.5 and no decimal places</td>
+
+  </tr>
+
+  </tbody>
+</table>
+
+<br/>
+
+<h3>JavaScript Calculator
+  (<%= link_to "jscalc", "/jscalc/index" %>)
+</h3>
+<br/>
+<h6><%= link_to "This gem", "https://rubygems.org/gems/jscalc",
+                {:target => "_blank"} %>
+  has been downloaded more than 1350 times</h6>
+
+<h6>Owing to a clash with
+  <%= link_to "Zurb_Foundation", "http://foundation.zurb.com/" %> CSS,
+  <%= link_to "jscalc", "/jscalc/index" %>
+  has been given its own controller (jscalc_controller)
+  and its own separate layout template (jscalc.html.erb). It
+  is available from the menu bar or by clicking the following button.
+  Thanks to
+  <%= link_to "Zurb_Foundation", "http://foundation.zurb.com/" %>
+  for this one.
+</h6>
+
+<div><%= link_to "jscalc", "/jscalc/index", class: "button success" %></div>
