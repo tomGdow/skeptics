@@ -1,5 +1,9 @@
 Naturalskeptics::Application.routes.draw do
 
+  get "pages/home"
+
+  get "pages/contact"
+
   get "jscalc/index"
 
   devise_for :users, :controllers => {:registrations => "registrations"}

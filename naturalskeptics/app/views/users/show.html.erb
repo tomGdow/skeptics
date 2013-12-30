@@ -1,5 +1,65 @@
-<h1>dlasd</h1>
+<h2>User Profile for <%= @user.email.split('@').first.humanize %></h2>
 
-<%= @user.email %>
-<%= @user.id %>
 
+<table>
+  <thead>
+  <tr>
+    <th width="150">Table Header</th>
+    <th width="150">Table Header</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr>
+    <td>E-mail</td>
+    <td><%= @user.email %></td>
+  </tr>
+  <tr>
+    <td>Human Name</td>
+    <td><%= @user.email.split('@').first.humanize %></td>
+  </tr>
+  <tr>
+    <td>User Id</td>
+    <td><%= @user.id %></td>
+  </tr>
+
+  <tr>
+    <td>User Created At</td>
+    <td><%= @user.created_at.strftime("%d %b. %Y") %></td>
+  </tr>
+
+  <tr>
+    <td>User Updated At</td>
+    <td><%= @user.updated_at.strftime("%d %b. %Y")  %></td>
+  </tr>
+
+  <tr>
+    <td>Sign-in Count</td>
+    <td><%=  @user.sign_in_count %></td>
+  </tr>
+
+  <tr>
+    <td>Current Sign in On</td>
+    <td><%=  @user.current_sign_in_at.strftime("%d %b. %Y") %></td>
+  </tr>
+
+  <tr>
+    <td>Last Sign-in On</td>
+    <td><%= @user.last_sign_in_at.strftime("%d %b. %Y") %></td>
+  </tr>
+
+  <tr>
+    <td>Current IP</td>
+    <td><%= @user.current_sign_in_ip %></td>
+  </tr>
+
+  <tr>
+    <td>Last Sign-in IP</td>
+    <td><%= @user.last_sign_in_ip %></td>
+  </tr>
+
+  <tr>
+    <td>Administrator</td>
+    <td><%= @user.admin %></td>
+  </tr>
+
+</table>
