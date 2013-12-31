@@ -37,9 +37,7 @@ describe CommoditiesController do
       response.body.should_not =~ /<body>\s*<\/body>/
     end
   end
-
-
-  end
+end
 
 
 

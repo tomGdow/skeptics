@@ -1,15 +1,16 @@
 class CommentsController < ApplicationController
 
-  before_filter :ensure_user,  :except => [:index, :show]
+  before_filter :ensure_user, :except => [:index, :show]
 
   def index
-     @cart = current_cart
-     @comments = Comment.paginate(:per_page => 7,
+    @cart = current_cart
+    @comments = Comment.paginate(:per_page => 7,
                                  :page => params[:page],
                                  :order => "created_at DESC").search(params[:search_query])
 
     respond_to do |format|
       format.html # index.html.erb
+      format.js
       format.json { render json: @comments }
     end
   end

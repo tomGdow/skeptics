@@ -30,7 +30,6 @@ class DiscussionsController < ApplicationController
 
   def new
     @discussion = Discussion.new
-  #@discussion = Discussion.new(title: params[:title], user_id: current_user.id)
 
     respond_to do |format|
       format.html # new.html.erb

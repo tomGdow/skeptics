@@ -1,5 +1,14 @@
 <h2>User Profile for <%= @user.email.split('@').first.humanize %></h2>
 
+<br/>
+
+<figure>
+  <%= image_tag @user.foto.url(:medium) %>
+
+</figure>
+<br/>
+<h5>Details</h5>
+<br/>
 
 <table>
   <thead>
@@ -29,17 +38,17 @@
 
   <tr>
     <td>User Updated At</td>
-    <td><%= @user.updated_at.strftime("%d %b. %Y")  %></td>
+    <td><%= @user.updated_at.strftime("%d %b. %Y") %></td>
   </tr>
 
   <tr>
     <td>Sign-in Count</td>
-    <td><%=  @user.sign_in_count %></td>
+    <td><%= @user.sign_in_count %></td>
   </tr>
 
   <tr>
     <td>Current Sign in On</td>
-    <td><%=  @user.current_sign_in_at.strftime("%d %b. %Y") %></td>
+    <td><%= @user.current_sign_in_at.strftime("%d %b. %Y") %></td>
   </tr>
 
   <tr>
@@ -63,3 +72,6 @@
   </tr>
 
 </table>
+
+
+<%= link_to 'Edit profile', edit_user_registration_path, class: "button success" %>

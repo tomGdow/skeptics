@@ -59,6 +59,17 @@
     <lastSignInIP>127.0.0.1</lastSignInIP>
   </myUsers>
   <myUsers>
+    <email>damien@gmail.com</email>
+    <userID>86</userID>
+    <createdAT>30 Dec. 2013</createdAT>
+    <updatedAT>30 Dec. 2013</updatedAT>
+    <signInCount>1</signInCount>
+    <currSignInAt>30 Dec. 2013</currSignInAt>
+    <lastSignInAt>30 Dec. 2013</lastSignInAt>
+    <currSignInIP>127.0.0.1</currSignInIP>
+    <lastSignInIP>127.0.0.1</lastSignInIP>
+  </myUsers>
+  <myUsers>
     <email>david@gmail.com</email>
     <userID>78</userID>
     <createdAT>27 Dec. 2013</createdAT>
@@ -297,6 +308,17 @@
     <signInCount>1</signInCount>
     <currSignInAt>27 Dec. 2013</currSignInAt>
     <lastSignInAt>27 Dec. 2013</lastSignInAt>
+    <currSignInIP>127.0.0.1</currSignInIP>
+    <lastSignInIP>127.0.0.1</lastSignInIP>
+  </myUsers>
+  <myUsers>
+    <email>handsome@gmail.com</email>
+    <userID>85</userID>
+    <createdAT>30 Dec. 2013</createdAT>
+    <updatedAT>30 Dec. 2013</updatedAT>
+    <signInCount>1</signInCount>
+    <currSignInAt>30 Dec. 2013</currSignInAt>
+    <lastSignInAt>30 Dec. 2013</lastSignInAt>
     <currSignInIP>127.0.0.1</currSignInIP>
     <lastSignInIP>127.0.0.1</lastSignInIP>
   </myUsers>

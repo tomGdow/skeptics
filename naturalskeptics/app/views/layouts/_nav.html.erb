@@ -12,9 +12,23 @@
       <%= link_to "Calculator", "jscalc/index", remote: false %>
       </li>
       <li class="has-dropdown">
-        <a href="#">Right Button with Dropdown</a>
+
+        <%= link_to "RubyGems/Git",
+                    "https://rubygems.org/gems/jscalc" %>
+
         <ul class="dropdown">
-          <li><a href="#">First link in dropdown</a></li>
+          <li><%= link_to "jscalc/RubyGems",
+                          "https://rubygems.org/gems/jscalc"%></li>
+
+          <li><%= link_to "binToDec/RubyGems",
+                          "https://rubygems.org/gems/binToDec"%></li>
+          <li><%= link_to "priceMarkUp/RubyGems",
+                          "https://rubygems.org/gems/priceMarkup"%></li>
+          <li><%= link_to "skeptics/GitHub",
+                          "https://github.com/tomGdow/skeptics"%></li>
+          <li><%= link_to "tomGdow/GitHub",
+                          "https://github.com/tomGdow"%></li>
+          <li><%= link_to "jscalc/Heroku", "http://tgd-jscalc.herokuapp.com/" %></li>
         </ul>
       </li>
     </ul>
@@ -50,8 +64,6 @@
 
       <% if current_user and current_user.admin %>
 
-          <li><%= link_to "XML", xmlusers_path, remote: false %></li>
-
           <li class="has-dropdown"><%= link_to "Users XML View", xmlusers_path, remote: false %>
             <ul class="dropdown">
 
@@ -60,8 +72,7 @@
                             :target => '_blank') %> </li>
             </ul>
           </li>
-
-          <li><%= link_to "Comments", comments_path, remote: false %></li>
+          <li><%= link_to "Comments", comments_path, remote: true %></li>
       <% end %>
     </ul>
   </section>

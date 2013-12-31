@@ -3,7 +3,6 @@ class UsersController < ApplicationController
   before_filter :validate_user
 
 
-
   def index
     @users = User.all
 

@@ -56,32 +56,4 @@ class Commodity < ActiveRecord::Base
 
 end
 
-=begin
-  def self.search(search_query)
-    if search_query
-      find(:all,:conditions => ['name LIKE ?', "%#{search_query}%"])
-    else
-      find(:all)
-    end
-  end
-=end
 
-=begin
-  def self.search(search_query, search)
-
-    if search == "search_name"
-    find(:all, :conditions => ["name LIKE ?", "%#{search_query}%"])
-    elsif search == "search_category"
-      find(:all, :conditions => ["category LIKE ?", "%#{search_query}%"])
-    elsif search == "search_description"
-      find(:all, :conditions => ["description LIKE ?", "%#{search_query}%"])
-    elsif search == "search_all"
-      find(:all, :conditions => ["category LIKE ? OR description LIKE ? OR name LIKE ? OR price LIKE ?",
-                                 "%#{search_query}%", "%#{search_query}%", "%#{search_query}%",
-                                 "%#{search_query}%"])
-
-    else
-      find (:all)
-    end
-  end
-=end

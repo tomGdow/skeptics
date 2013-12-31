@@ -62,23 +62,6 @@ module TGD
     file.close
   end
 
-=begin
-  def self.write_to_sorted_xml myfile
-
-   myadd(@user.email,
-               @user.id,
-               @user.created_at.strftime("%d %b. %Y"),
-               @user.updated_at.strftime("%d %b. %Y"),
-               @user.sign_in_count,
-               @user.current_sign_in_at.strftime("%d %b. %Y"),
-               @user.last_sign_in_at.strftime("%d %b. %Y"),
-               @user.current_sign_in_ip,
-               @user.last_sign_in_ip,
-               File.join(Rails.root, 'public', myfile)
-         )
-  end
-=end
-
   #This function not used. May be used to write xml from def/index
   def  self.write_xml myvar, myfile
     xml_string = myvar.to_xml
