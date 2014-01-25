@@ -1,0 +1,32 @@
+\BOOKMARK [1][-]{section.1}{Introduction}{}
+\BOOKMARK [1][-]{section.2}{Architecture}{}
+\BOOKMARK [1][-]{section.3}{General Implementation Methods}{}
+\BOOKMARK [2][-]{subsection.3.1}{Programs and Frameworks}{section.3}
+\BOOKMARK [2][-]{subsection.3.2}{External Gems}{section.3}
+\BOOKMARK [2][-]{subsection.3.3}{Gems developed in this Work}{section.3}
+\BOOKMARK [2][-]{subsection.3.4}{Ajax}{section.3}
+\BOOKMARK [2][-]{subsection.3.5}{Append to and Sort an XML file when a New User Registers}{section.3}
+\BOOKMARK [2][-]{subsection.3.6}{Use XMLHttp Request to View an XML File Dynamically}{section.3}
+\BOOKMARK [2][-]{subsection.3.7}{Validation}{section.3}
+\BOOKMARK [2][-]{subsection.3.8}{Mailers}{section.3}
+\BOOKMARK [2][-]{subsection.3.9}{Unit Testing and Test-Driven Development}{section.3}
+\BOOKMARK [2][-]{subsection.3.10}{Paperclip and Image Upload}{section.3}
+\BOOKMARK [2][-]{subsection.3.11}{Search}{section.3}
+\BOOKMARK [2][-]{subsection.3.12}{Will-paginate}{section.3}
+\BOOKMARK [2][-]{subsection.3.13}{Devise}{section.3}
+\BOOKMARK [2][-]{subsection.3.14}{Gravatars}{section.3}
+\BOOKMARK [2][-]{subsection.3.15}{Before Filtering}{section.3}
+\BOOKMARK [1][-]{section.4}{Specific Implementation Components}{}
+\BOOKMARK [2][-]{subsection.4.1}{Shopping Cart/Commodities Page}{section.4}
+\BOOKMARK [2][-]{subsection.4.2}{Check-out}{section.4}
+\BOOKMARK [2][-]{subsection.4.3}{Dynamic Users XML File}{section.4}
+\BOOKMARK [2][-]{subsection.4.4}{Static Users XML File}{section.4}
+\BOOKMARK [2][-]{subsection.4.5}{Profile Pages}{section.4}
+\BOOKMARK [2][-]{subsection.4.6}{Discussion Pages and User Comments}{section.4}
+\BOOKMARK [2][-]{subsection.4.7}{Comments Page}{section.4}
+\BOOKMARK [2][-]{subsection.4.8}{Authentication Logic}{section.4}
+\BOOKMARK [1][-]{section.5}{GitHub and RubyGems}{}
+\BOOKMARK [1][-]{section.6}{Browser}{}
+\BOOKMARK [1][-]{section.7}{Discussion}{}
+\BOOKMARK [1][-]{section.8}{Declaration}{}
+\BOOKMARK [1][-]{section.9}{References}{}

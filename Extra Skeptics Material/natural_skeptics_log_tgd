@@ -1,0 +1,287 @@
+rails new naturalskeptics
+rails generate controller Home index
+rm public/index.html
+
+rails g foundation:install
+
+rails generate scaffold Catalogue name:string description:text price:float image_url:string
+rake db:rollback
+rails destroy scaffold Catalgoue
+
+rails generate scaffold Commodity name:string description:text price:float image_url:string
+rails generate scaffold Catalogue name:string description:text price:float image_url:string
+
+
+rails generate migration add_category_to_commodities category:integer
+#Shopping cart
+
+rails generate scaffold cart
+rake db:migrate
+
+rails generate scaffold line_item commodity_id:integer cart_id:integer
+
+rake db:migrate
+
+In app -> Models -> cart.rb, in class Cart, add the following line: 
+
+	has_many :line_items, :dependent => :destroy
+
+
+#Firstly, add the following to the attr_accessible line:
+
+	, :commodity
+	
+#so that the line reads
+
+	attr_accessible :cart_id, :commodity_id, :commodity
+
+
+SECONDLY??), to the same class add(ie to LineItem at app -> models -> line_item.rb) 
+
+	belongs_to :commodity
+	belongs_to :cart
+
+
+#Modify the lineItems_controller (app -> controllers -> line_items_controller.rb)
+ #modify the  def create ... end method as follows: 
+  #FIRSTLY modify the first line so that it now consists of the following four lines:
+ 
+		@cart = current_cart
+		commodity = Commodity.find(params[:commodity_id])
+		@line_item = @cart.line_items.new(:commodity => commodity)
+
+
+
+#In app -> views -> carts -> show.html.erb, modify to first line so that it consists of the following: 
+ #(leave links alone) 
+
+	<p id = "notice"><%= notice %></p>
+	<h2>Your Cart</h2>
+	<ul>
+		<% for item in @cart.line_items %>
+		<li><%= item.commodity.name %></li>
+	<% end %>
+	</ul>
+
+
+#In app -> models -> commodities.rb (to Class Commodities) add the following line:
+#(after 'belongs_to :user')
+
+	has_many :line_items
+
+
+#In app -> views -> commodities -> index.html.erb
+#add the following line after ''Are you sure?' } %></td>' (but before '</tr>')
+
+	<td><%= button_to 'Add to Cart', line_items_path(:commodity_id => commodity) %></td>
+
+#Go to 
+	localhost:3000/enzymes	
+
+
+rails generate migration add_quantity_to_line_item quantity:integer
+
+
+attr_accessible :cart_id, :commodity_id, :commodity, :quantity
+#attr_accessible :cart_id, :enzyme_id, :enzyme, :quantity
+
+
+
+def add_commodity(commodity)
+		current_item = line_items.where(:commodity_id => commodity.id).first
+		if current_item
+			current_item.quantity += 1
+		else
+			current_item = LineItem.new(:commodity_id => commodity.id)
+				line_items << current_item
+		end
+			current_item
+	end
+
+##Check-Out
+
+rails generate scaffold Order firstname:string lastname:string address:text email:string confirm_email:string card_number:integer card_type:string
+
+rails generate migration add_order_id_to_line_item order_id:integer
+##mailer
+rails generate mailer OrderNotifier received shipped
+
+#devise
+#installed gem
+rails generate devise:install
+#in config/development.rb 
+config.action_mailer.default_url_options = { :host => 'localhost:3000' }
+
+rails g devise user
+
+rails generate migration add_admin_to_users admin:boolean
+
+
+rails generate controller discussion index show
+rails generate model Discussion title:string description:text user_id:integer
+rake db:migrate
+
+rails generate controller comments index show
+rails generate model Comment text:text date:date user_id:integer
+bundle exec rake db:migrate 
+annotate
+
+rails generate scaffold Comment text:text date:date user_id:integer discussion_id:integer
+rails generate scaffold Discussion  title:string introduction:text description:text user_id:integer
+
+rails generate migration add_discussion_id_to_comments discussion_id:integer
+
+rails generate migration add_caption_to_discussions caption:string
+
+ rails generate paperclip discussion photo
+rails generate paperclip user foto
+
+rails generate controller popper index show
+rails generate model Popper user_id:integer
+rails generate migration add_popper_id_to_comment
+
+rails generate controller jscalc index
+
+popper_id:integer
+
+review comments
+Skeptic for discussion
+
+rails generate scaffold Review text:text date:date user_id:integer skeptic_id:integer
+rails generate scaffold Skeptic title:string user_id:integer
+bundle exec rake db:migrate
+
+#added the following to skeptics_controller, def/show
+
+@thomas = @skeptic.comments.paginate(:per_page => 5,
+                                            :page => params[:page],
+                                            :order => "created_at DESC").search(params[:search_query])
+
+
+
+#Modified the first line of def/create (in skeptics_controller) to
+
+@skeptic = Skeptic.create( params[:skeptic])
+
+#Models 
+
+Added the following to Skeptics.rb
+
+  belongs_to :user
+
+  has_many :reviews
+
+ # added the following to Review.rb
+
+ belongs_to :skeptic
+  belongs_to :user
+  
+
+
+  def uname
+    user.email.split('@').first
+  end
+
+
+  def self.search search_query
+    if search_query
+      find :all, conditions: ['text LIKE ?', "%#{search_query}%"]
+    else
+      find :all
+    end
+  end
+
+#Views. Added the following to skeptics/show.html.erb
+
+<table>
+
+  <%  @thomas.each do |review| %>
+      <tr class="<%= cycle('list_line_odd', 'list_line_even') %>">
+
+        <td class = "list_text_comment"><%= sanitize review.text %></td>
+
+        <td class = "list_text_comment_small"> <%= review.uname%>        </td>
+
+        <td class = "list_text_comment_small"><%= time_ago_in_words(review.created_at) + " ago" %></td>
+
+        <% if current_user and current_user.admin %>
+
+            <td><%= link_to 'Edit Comment', edit_review_path(review.id) %></td>
+
+        <% end %>
+
+      </tr>
+  <% end %>
+
+
+</table>
+
+
+
+<div class="flickr_pagination">
+  <div class="page_info">
+    <%= page_entries_info @thomas %>
+  </div>
+
+  <%= will_paginate  @thomas %>
+
+</div>
+
+
+
+
+
+
+<%= form_for([@skeptics, @skeptics.reviews.build]) do |f| %>
+    <div class="field">
+      <%= f.hidden_field :user_id %>
+      <%= f.hidden_field :skeptic_id %>
+    </div>
+    <div class="field">
+      <%= f.label :text %>
+      <br/>
+      <%= f.text_area :text, size: "300x10" %>
+    </div>
+    <div class="actions"><br/>
+      <%= f.submit "Add Your Comment", class: "button" %>
+    </div>
+<% end %>
+
+#Added the following to Reviews/index.html.erb
+
+<br />
+
+<div class="flickr_pagination">
+  <div class="page_info">
+    <%= page_entries_info @reviews %>
+  </div>
+
+  <%= will_paginate @reviews %>
+
+</div>
+
+<br/>
+
+<div><%= link_to 'New Review', new_review_path %>    </div>
+
+<br/>
+
+<%= form_tag reviews_path, :method => 'get' do %>
+    <p>
+    <p>  <%= text_field_tag :search_query, params[:search_query] %>    &nbsp;
+      <%= submit_tag "Search", :name => nil %>
+    </p>
+<% end  %>
+<br/>
+
+#added the following to routes
+
+ resources :skeptics do
+
+    resources :reviews
+
+  end
+
+
+ resources :reviews
+

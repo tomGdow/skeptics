@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en-US">
+<head>
+  <meta charset="UTF-8">
+  <title><%= content_for?(:title) ? yield(:title) : "Natural Skeptics" %></title>
+
+  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.0/jquery.min.js"></script>
+
+  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.9/jquery-ui.min.js"></script>
+
+  <%= stylesheet_link_tag "jscalcAlt.css" %>
+
+  <%= stylesheet_link_tag "jscalcZurb" %>
+  <%= javascript_include_tag "vendor/modernizr" %>
+
+  <%= csrf_meta_tags  %>
+
+</head>
+<body class='<%= controller.controller_name %>'>
+
+<%= render partial: 'layouts/nav' %>
+<%= render partial: 'layouts/breadcrumbs' %>
+<%= render partial: 'layouts/hiddenDivs' %>
+
+<div id = "yieldId">
+<%= yield %>
+</div>
+
+<%= javascript_include_tag "jscalc.js" %>
+</body>
+</html>
+
+

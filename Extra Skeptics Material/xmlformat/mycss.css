@@ -1,0 +1,38 @@
+﻿table
+{
+    background-color: #DBEAF9;
+    border-collapse: collapse;
+    border: none;
+}
+
+tr
+{
+    border-collapse: collapse;
+}
+
+td
+{
+    text-align: center;
+    vertical-align: middle;
+}
+
+
+
+tr:nth-child(odd)
+{
+    background: #284775;
+    color: white;
+}
+
+tr:nth-child(even)
+{
+    background: pink;
+    color: white;
+}
+/*header*/
+
+th
+{
+    background: #284775;
+    color: white;
+}

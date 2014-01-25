@@ -1,0 +1,16 @@
+<p id = "notice"><%= notice %></p>
+<h2>Your Cart from show</h2>
+
+<table>
+  <%= render(@cart.line_items) %>
+  <%= render(@cart) %>
+  <br />
+  <tdTotal Price: <%= number_to_currency(@cart.total_price, :unit => '&euro;') %><br /></td>
+</table>
+
+ <p> <%= button_to 'Empty cart', @cart, :method => :delete,
+                                        :confirm => 'Are you sure?',
+                                        :class => "button success small 5 radius "%></p>
+<%= link_to 'Edit', edit_cart_path(@cart) %> |
+<%= link_to 'Back', carts_path %>
+

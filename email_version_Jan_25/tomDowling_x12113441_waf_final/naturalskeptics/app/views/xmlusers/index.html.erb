@@ -1,0 +1,59 @@
+<h1>Users XML File</h1>
+<div id="xmlusers">
+  <table id="xmltable">
+
+    <thead>
+    <tr>
+      <th id="xmlTableHeaderLeft">Attribute</th>
+      <th id="xmlTableHeaderRight">Value</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+      <td>Username</td>
+      <td id="td_email">row 1, cell 2</td>
+    </tr>
+    <tr>
+      <td>User Id</td>
+      <td id="td_user_id">row 2, cell 2</td>
+    </tr>
+    <tr>
+      <td>Created At</td>
+      <td id="td_created_at">row 2, cell 2</td>
+    </tr>
+    <tr>
+      <td>Updated At</td>
+      <td id="td_updated_at">row 2, cell 2</td>
+    </tr>
+    <tr>
+      <td>Sign-in Count</td>
+      <td id="td_signInCount">row 2, cell 2</td>
+    </tr>
+    <tr>
+      <td>Current Sign At</td>
+      <td id="td_curr_sign_in_at">row 2, cell 2</td>
+    </tr>
+    <tr>
+      <td>Last Sign At</td>
+      <td id="td_last_sign_in_at">row 2, cell 2</td>
+    </tr>
+
+    <tr>
+      <td>Current Sign-in IP</td>
+      <td id="td_curr_sign_in_ip">row 2, cell 2</td>
+    </tr>
+
+    <tr>
+      <td>Last Sign-in IP</td>
+      <td id="td_last_sign_in_ip">row 2, cell 2</td>
+    </tr>
+    </tbody>
+  </table>
+</div>
+<%= render partial: 'layouts/userPicker' %>
+
+<p>
+  <%= link_to("View XML File", "/xmlNewUsers.xml",
+              :target => '_blank', class: "button secondary tiny") %>
+</p>
+

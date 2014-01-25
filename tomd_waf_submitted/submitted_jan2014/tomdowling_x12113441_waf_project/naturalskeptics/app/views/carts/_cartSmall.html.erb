@@ -1,0 +1,26 @@
+<h4 class="cartheader">Your Cart</h4>
+<h6 class="cartheader"><%= username %></h6>
+<div>
+<table>
+  <tr>
+    <td>Total Price</td>
+    <td></td>
+    <td></td>
+    <td> <%= number_to_currency(@cart.total_price,
+                                :unit => '&euro;',
+                                precision: 0) %>
+    </td>
+  </tr>
+</table>
+</div>
+<div class="checkOutButtons">
+  <%= link_to "Larger", commodities_path,
+              id: "largerCartButton",
+              class: "button right  tiny secondary" %>
+
+  <%= button_to "Checkout", new_order_path,
+                method: :get,
+                :id => "checkOutButton",
+                :class => "button secondary tiny",
+                remote: true %>
+</div>

@@ -1,0 +1,20 @@
+<div class="flickr_pagination">
+  <div class="page_info">
+    <%= page_entries_info @discussions %>
+  </div>  <br/>
+  <%= will_paginate @discussions %>
+</div> <br/>
+
+<div id="searchbutton" class="controls">
+
+  <%= form_tag discussions_path, :method => 'get' do %>
+
+      <p>
+        <%= text_field_tag :search_query, params[:search_query] %>  &nbsp;
+        <%= submit_tag "Search", :name => nil, class: "button" %>
+
+        <br/>
+        <br/>
+      </p>
+  <% end %>
+</div>

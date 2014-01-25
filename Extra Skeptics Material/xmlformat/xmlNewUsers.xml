@@ -1,0 +1,50 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="xmlNewUsers.xsl"?>
+<!DOCTYPE root [
+<!ELEMENT root (myUsers)*>
+<!ELEMENT myUsers (email | userID | createdAT | updatedAT | signInCount | currSignInAt | lastSignInAt | currSignInIP | lastSignInIP)*>
+<!ELEMENT email (#PCDATA)>
+<!ELEMENT userID (#PCDATA)>
+<!ELEMENT createdAT (#PCDATA)>
+<!ELEMENT updatedAT (#PCDATA)>
+<!ELEMENT signInCount (#PCDATA)>
+<!ELEMENT currSignInAt (#PCDATA)>
+<!ELEMENT lastSignInAt (#PCDATA)>
+<!ELEMENT currSignInIP (#PCDATA)>
+<!ELEMENT lastSignInIP (#PCDATA)>
+]>
+<root>
+  <myUsers>
+    <email>clivevillian@gmail.com</email>
+    <userID>49</userID>
+    <createdAT>24 Dec. 2013</createdAT>
+    <updatedAT>24 Dec. 2013</updatedAT>
+    <signInCount>1</signInCount>
+    <currSignInAt>24 Dec. 2013</currSignInAt>
+    <lastSignInAt>24 Dec. 2013</lastSignInAt>
+    <currSignInIP>127.0.0.1</currSignInIP>
+    <lastSignInIP>127.0.0.1</lastSignInIP>
+  </myUsers>
+  <myUsers>
+    <email>example-1@railstutorial.org</email>
+    <userID>50</userID>
+    <createdAT>24 Dec. 2013</createdAT>
+    <updatedAT>24 Dec. 2013</updatedAT>
+    <signInCount>1</signInCount>
+    <currSignInAt>24 Dec. 2013</currSignInAt>
+    <lastSignInAt>24 Dec. 2013</lastSignInAt>
+    <currSignInIP>127.0.0.1</currSignInIP>
+    <lastSignInIP>127.0.0.1</lastSignInIP>
+  </myUsers>
+  <myUsers>
+    <email>thomasgdowling@gmail.com</email>
+    <userID>51</userID>
+    <createdAT>25 Dec. 2013</createdAT>
+    <updatedAT>25 Dec. 2013</updatedAT>
+    <signInCount>1</signInCount>
+    <currSignInAt>25 Dec. 2013</currSignInAt>
+    <lastSignInAt>25 Dec. 2013</lastSignInAt>
+    <currSignInIP>127.0.0.1</currSignInIP>
+    <lastSignInIP>127.0.0.1</lastSignInIP>
+  </myUsers>
+</root>

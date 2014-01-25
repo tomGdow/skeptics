@@ -1,0 +1,38 @@
+<p id="notice"><%= notice %></p>
+<h1>Show Product</h1>
+<table>
+  <tr>
+    <th>Name</th>
+      <% if current_user and current_user.admin %>
+    <th>Cost Price</th>
+      <% end %>
+    <th>Sales Price</th>
+    <th>Category</th>
+    <th>Image</th>
+    <th>Description</th>
+  </tr>
+
+  <tr>
+    <td><%= @commodity.name %></td>
+
+      <% if current_user and current_user.admin %>
+    <td><%= @commodity.price %></td>
+      <% end %>
+
+    <td><%= Dowstore
+            .priceMarkup(@commodity.price, 0.45, 2) %></td>
+    <td><%= @commodity.category %></td>
+    <td><%= image_tag(@commodity.image_url) %></td>
+    <td><%= @commodity.description %> </td>
+  </tr>
+</table>
+
+<% if current_user %>
+    <td> <%= button_to 'Add to Cart',
+                       line_items_path(:commodity_id => @commodity),
+                       remote: true,
+                       :class => "button success tiny 5 radius " %>
+    </td>
+<% end %>
+
+<%= link_to 'Back', commodities_path, class: "button secondary" %>

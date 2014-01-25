@@ -1,0 +1,22 @@
+ <% if line_item == @current_item %>
+        <tr id="current_item">
+<% else %>
+        <tr>
+<% end %>
+
+ <td><a  href="/carts/remove/<%= line_item.id%>" >
+       <span class="has-tip" title="Remove Item">
+         <%= line_item.quantity %> &times;<%= truncate(line_item.commodity.name, length: 20) %>
+       </span>
+     </a>
+ <td>
+
+<td><%= number_to_currency(line_item.sales_price.to_f,
+                               :unit => '&euro;', precision: 0)%></td>
+<td> <%= number_to_currency(line_item.total_price_lineItem,
+                                 :unit => '&euro;', precision: 0) %></td>
+</tr>
+
+
+ <!--Button version of Remove-->
+ <!--<td><a  href="/carts/remove/<%#= line_item.id%>" class = "button success tiny 10 round ">Remove</a></td>-->

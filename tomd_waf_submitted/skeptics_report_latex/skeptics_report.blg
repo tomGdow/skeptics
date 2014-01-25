@@ -1,0 +1,56 @@
+This is BibTeX, Version 0.99c (TeX Live 2009/Debian)
+The top-level auxiliary file: skeptics_report.aux
+The style file: agsm-tgd.bst
+Database file #1: skeptics.bib.bib
+I was expecting a `,' or a `}'---line 200 of file skeptics.bib.bib
+ : 
+ : @MISC{mysqlsun2010,
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+I was expecting a `,' or a `}'---line 269 of file skeptics.bib.bib
+ : 
+ : @MISC{bradford2013,
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+You've used 1 entry,
+            2911 wiz_defined-function locations,
+            645 strings with 4902 characters,
+and the built_in function-call counts, 5511 in all, are:
+= -- 910
+> -- 70
+< -- 0
++ -- 445
+- -- 21
+* -- 479
+:= -- 1100
+add.period$ -- 1
+call.type$ -- 1
+change.case$ -- 14
+chr.to.int$ -- 1
+cite$ -- 1
+duplicate$ -- 16
+empty$ -- 30
+format.name$ -- 24
+if$ -- 989
+int.to.chr$ -- 5
+int.to.str$ -- 0
+missing$ -- 2
+newline$ -- 6
+num.names$ -- 11
+pop$ -- 7
+preamble$ -- 1
+purify$ -- 15
+quote$ -- 0
+skip$ -- 11
+stack$ -- 0
+substring$ -- 1296
+swap$ -- 1
+text.length$ -- 14
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 2
+warning$ -- 0
+while$ -- 21
+width$ -- 0
+write$ -- 17
+(There were 2 error messages)

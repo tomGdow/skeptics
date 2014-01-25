@@ -1,0 +1,80 @@
+<nav class="top-bar" data-topbar>
+  <ul class="title-area">
+    <li class="name">
+      <h1>
+        <%= link_to "Home", root_path %>
+      </h1>
+    </li>
+  </ul>
+  <section class="top-bar-section"> <!-- Right Nav Section -->
+    <ul class="right">
+      <li class="active">
+      <%= link_to "Calculator", "jscalc/index", remote: false %>
+      </li>
+      <li class="has-dropdown">
+
+        <%= link_to "RubyGems/Git",
+                    "https://rubygems.org/gems/jscalc" %>
+
+        <ul class="dropdown">
+          <li><%= link_to "jscalc/RubyGems",
+                          "https://rubygems.org/gems/jscalc"%></li>
+
+          <li><%= link_to "binToDec/RubyGems",
+                          "https://rubygems.org/gems/binToDec"%></li>
+          <li><%= link_to "priceMarkUp/RubyGems",
+                          "https://rubygems.org/gems/priceMarkup"%></li>
+          <li><%= link_to "skeptics/GitHub",
+                          "https://github.com/tomGdow/skeptics"%></li>
+          <li><%= link_to "tomGdow/GitHub",
+                          "https://github.com/tomGdow"%></li>
+          <li><%= link_to "jscalc/Heroku", "http://tgd-jscalc.herokuapp.com/" %></li>
+        </ul>
+      </li>
+    </ul>
+    <!-- Left Nav Section -->
+    <ul class="left">
+      <li class="active">
+        <%= link_to "Commodities", commodities_path, remote: false %>
+      </li>
+      <li>
+        <%= link_to "Gems", mygems_path, :class => "ajaxClass" %>
+      </li>
+
+      <% if  current_user.present?%>
+
+      <li>
+        <%= link_to "Profile", user_path(current_user.id), remote: false %></li>
+
+      <% end %>
+      <li class="has-dropdown">
+        <%= link_to "Discussions", discussions_path, remote: false %>
+        <ul class="dropdown">
+
+          <li><%= link_to "Index", discussions_path, remote: false %></li>
+          <li><%= link_to "Popper", discussion_path(8), remote: false %></li>
+          <li><%= link_to "Watson", discussion_path(10), remote: false %></li>
+          <li><%= link_to "Sanger", discussion_path(11), remote: false %></li>
+          <li><%= link_to "Crick", discussion_path(12), remote: false %></li>
+          <li><%= link_to "Pauling", discussion_path(13), remote: false %></li>
+          <li><%= link_to "Hodgkin", discussion_path(14), remote: false %></li>
+
+        </ul>
+      </li>
+
+      <% if current_user and current_user.admin %>
+
+          <li class="has-dropdown"><%= link_to "Users XML View", xmlusers_path, remote: false %>
+            <ul class="dropdown">
+
+              <li><%= link_to "Dynamic XML", xmlusers_path, remote: false %></li>
+              <li><%= link_to("XML file", "/xmlNewUsers.xml",
+                            :target => '_blank') %> </li>
+            </ul>
+          </li>
+          <li><%= link_to "Comments", comments_path, remote: true %></li>
+      <% end %>
+    </ul>
+  </section>
+</nav>
+

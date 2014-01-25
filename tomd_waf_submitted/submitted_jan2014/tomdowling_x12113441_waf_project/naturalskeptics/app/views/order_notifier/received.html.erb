@@ -1,0 +1,16 @@
+<h3>Natural Skeptics Order Confirmation </h3>
+<p>Dear <%= @order.firstname %>,</p>
+<p>The following items were ordered on <%= Time.now.strftime("%m/%d/%Y") %></p>
+<p>They will be delivered by  <%= 10.days.from_now.strftime("%m/%d/%Y")%></p>
+<br />
+<table>
+  <tr>
+    <th colspan="2">Item</th>
+    <th>Unit</th>
+    <th>Price</th>
+  </tr>
+  <tr>&nbsp;</tr>
+  <tr><%= render @order.line_items %></tr>
+ </table>
+ <br/>
+<p>Thank you for your order from Natural Skeptics.</p>

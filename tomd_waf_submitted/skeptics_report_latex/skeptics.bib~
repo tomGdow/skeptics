@@ -1,0 +1,296 @@
+
+@Book{ullman2012,
+author = {Larry Ullman},
+title = {Modern Javascript.  Develop and Design},
+publisher = {PeachPit Press},
+year = {2012},
+edition = {2nd}
+}
+
+@Book{agile2012,
+author = {Sam Ruby and Dave Thomas and David {Heinemeier Hasson}},
+title = {Agile Web Development with Rails},
+publisher = {The Pragmatic Programmers},
+year = {2012},
+edition = {4th}
+}
+
+@MISC{schrodinger1950,
+author = {Schrodinger, Erwin},
+title = {What is Life?},
+note = {[Internet] (accessed 19-Nov-2013). Available at:},
+year = {2009},
+url = {www.google.ie},
+howpublished = "\url{http://aiweb.techfak.uni-bielefeld.de/content/bworld-robot-control-software/}"
+}
+
+@MISC{netcraft2012,
+author = {Netcraft},
+title = {March Web Server Survey},
+note = {[Internet] (accessed 19-Nov-2012). Available at:},
+year = {2012},
+howpublished = "\url{http://news.netcraft.com/archives/2012/03/05/march-2012-web-server-survey.html}"
+}
+
+@MISC{wolframAlphaWorldPop,
+author = {{Wolfram Alpha}},
+title = {World Population (Search Terms)},
+note = {[Internet] (accessed 20-Nov-2013). Available at:},
+year = {2013},
+howpublished = "\url{http://www.wolframalpha.com/input/?i=World+population}"
+}
+
+@MISC{wolframAlphaInternetPeople,
+author = {{Wolfram Alpha}},
+title = {how many people use the internet (Search Terms)},
+note = {[Internet] (accessed 20-Nov-2013). Available at:},
+year = {2013},
+howpublished = "\url{http://www.wolframalpha.com/input/?i=how+many+people+use+the+internet}"
+}
+
+
+@MISC{wolframAlphaSites,
+author = {{Wolfram Alpha}},
+title = {How many websites are there? (Search Terms)},
+note = {[Internet] (accessed 21-Nov-2013). Available at:},
+year = {2013},
+howpublished = "\url{http://www.wolframalpha.com/input/?i=how+many+websites+are+there}"
+}
+
+http://www.wolframalpha.com/input/?i=how+many+websites+are+there
+
+@MISC{Schachinger2012,
+author = {Kristine Schachinger},
+title = {How To Use HTML Meta Tags},
+note = {[Internet] (accessed 20-Nov-2013). Available at:},
+year = {2012},
+howpublished = "\url{http://searchenginewatch.com/article/2067564/How-To-Use-HTML-Meta-Tags}"
+}
+
+@MISC{googleSEO2013,
+author = {Google},
+title = {Search Engine Optimization Starter Guide},
+note = {[Internet] (accessed 20-Nov-2013). Available at (pdf file):},
+year = {2013},
+howpublished = "\url{https://static.googleusercontent.com/media/www.google.com/en//webmasters/docs/search-engine-optimization-starter-guide.pdf}"
+}
+
+@MISC{nyt2012,
+author = {{New York Times}},
+title = {For Impatient Web Users, an Eye Blink Is Just Too Long to Wait},
+note = {[Internet] (accessed 20-Nov-2013). Available at:},
+year = {2012},
+howpublished = "\url{http://www.nytimes.com/2012/03/01/technology/impatient-web-users-flee-slow-loading-sites.html?pagewanted=all&_r=0}"
+}
+
+@MISC{nielsen2012,
+author = {Jakob Nielsen},
+title = {Usability 101.  Introduction to Usability},
+note = {[Internet] (accessed 22-Nov-2013). Available at:},
+year = {2012},
+howpublished = "\url{http://www.nngroup.com/articles/usability-101-introduction-to-usability/}"
+}
+
+@Book{deitelsquared2009,
+author = {P.J. Deitel and H. M. Deitel},
+title = {Internet \& World Wide Web.  How to Program},
+publisher = {Pearson. Prentice-Hall},
+year = {2012},
+edition = {4th}
+}
+
+@Book{niederestRobbins2012,
+author = {Jennifer Niederest-Robbins},
+title = {Learning Web Design. A Beginner's Guide to HTML, CSS, Javascript, and Web Graphics},
+publisher = {O'Reilly},
+year = {2012},
+edition = {4th}
+}
+
+@MISC{coyier2009,
+author = {Chris Coyier},
+title = {CSS Sprites: What They Are, Why They're Cool, and How To Use Them},
+note = {[Internet] (accessed 22-Nov-2013). Available at:},
+year = {2009},
+howpublished = "\url{http://css-tricks.com/css-sprites/}"
+}
+
+@MISC{tenni2006,
+author = {Tenni Theurer},
+title = {Performance Research, Part 1: What the 80/20 Rule Tells Us about Reducing HTTP Requests},
+note = {[Internet] (accessed 26-Nov-2013). Available at:},
+year = {2006},
+howpublished = "\url{http://yuiblog.com/blog/2006/11/28/performance-research-part-1/}"
+}
+
+@MISC{w3c2013,
+author = {W3C},
+title = {Declaring character encodings in HTML},
+note = {[Internet] (accessed 27-Nov-2013). Available at:},
+year = {2013},
+howpublished = "\url{http://www.w3.org/International/questions/qa-html-encoding-declarations}"
+}
+
+@MISC{hubris2011,
+author = { Rohit Raisinghani},
+title = {Declaring character encodings in HTML},
+note = {[Internet] (accessed 27-Nov-2013). Available at:},
+year = {2011},
+howpublished = "\url{http://rdraisinghani.wordpress.com/2011/12/18/how-missing-characterset-can-cause-security-vulnerability/}"
+}
+
+@MISC{acunetixxss2013,
+author = {Acunetix},
+title = {Cross Site Scripting Attack.  What is cross site scripting?},
+note = {[Internet] (accessed 24-Nov-2013). Available at:},
+year = {2013},
+howpublished = "\url{http://www.acunetix.com/websitesecurity/cross-site-scripting/}"
+}
+
+@MISC{acunetixbxss2013,
+author = {Acunetix},
+title = {Blind XSS: The Ticking Time Bomb of XSS Attacks},
+note = {[Internet] (accessed 24-Nov-2013). Available at:},
+year = {2013},
+howpublished = "\url{http://www.acunetix.com/blog/web-security-zone/articles/blind-xss/}"
+}
+
+@MISC{acunetixdomxss2013,
+author = {Acunetix},
+title = {DOM-based Cross-Site Scripting (XSS) Explained},
+note = {[Internet] (accessed 24-Nov-2013). Available at:},
+year = {2013},
+howpublished = "\url{http://www.acunetix.com/blog/web-security-zone/articles/dom-xss-explained/}"
+}
+
+@MISC{w3cjs2012,
+author = {W3C},
+title = {A Short History of JavaScript},
+note = {[Internet] (accessed 28-Nov-2013). Available at:},
+year = {2012},
+howpublished = "\url{http://www.w3.org/community/webed/wiki/A_Short_History_of_JavaScript}"
+}
+
+@MISC{jjg2005,
+author = {Jesse James Garrett},
+title = {Ajax: A New Approach to Web Applications},
+note = {[Internet] (accessed 28-Nov-2013). Available at:},
+year = {2005},
+howpublished = "\url{http://www.adaptivepath.com/ideas/ajax-new-approach-web-applications/}"
+}
+
+
+@MISC{cockcroftvid2012,
+author = {Douglas Crockford},
+title = {Securing Javascript},
+note = {[Internet] (accessed 28-Nov-2012). Available at (video):},
+year = {2012},
+howpublished = "\url{http://vimeo.com/54087885}"
+
+}
+
+@MISC{cockcroftYahoovid2012,
+author = {Douglas Crockford},
+title = {Principles of Security },
+note = {[Internet] (accessed 28-Nov-2013). Available at (video):},
+year = {2012},
+howpublished = "\url{http://www.youtube.com/watch?v=zKuFu19LgZA}"
+
+
+@MISC{mysqlsun2010,
+author = {San-Tsai Sun and Konstantin Beznosov},
+title = {Retrofitting Existing Web Applications with
+Effective Dynamic Protection Against SQL Injection Attacks},
+note = {[Internet] (accessed 28-Nov-2013). Available at (pdf):},
+year = {2010},
+howpublished = "\url{http://lersse-dl.ece.ubc.ca/record/205/files/205.pdf}"
+}
+
+@Article{lich60,
+author = {Licklider, J.C.R},
+title = {Man-Computer Symbiosis.},
+journal = {IRE Transactions on Human Factors in Electronics.  (HFE-1)},
+year = {1960},
+pages = {4 - 11},
+key = {"\url{http://memex.org/licklider.pdff}},
+volume = {100},
+note = {Available at (pdf):},
+howpublished = "\url{http://memex.org/licklider.pdf}"
+
+}
+
+@MISC{cumming2009,
+author = {John Graham‐Cumming},
+title = {JavaScript Security. [Causata]},
+note = {[Internet] (accessed 28-Nov-2013). Available at (pdf):},
+year = {2010},
+howpublished = "\url{https://www.grc.com/sn/files/jgc-javascript-security.pdf}"
+}
+
+@MISC{xssOrig2000,
+author = {David Ross and Ivan Brugiolo and John Coates and Michael Roe},
+title = {Cross-site Scripting Overview},
+note = {[Internet] (accessed 28-Nov-2013). Available at:},
+year = {2000},
+howpublished = "\url{http://ha.ckers.org/cross-site-scripting.html}"
+}
+
+@Book{grossmanXSS2007,
+author = {Jeremiah Grossman and Robert Hansen and Petko Petkov and Anton Rager and Seth Fogie},
+title = {XSS Attacks. Cross Site Scripting. Exploits and Defence},
+publisher = {Syngress Publishing, Inc},
+year = {2007},
+edition = {1st}
+}
+
+@Book{pacoHopeXSS2008,
+author = {Paco Hope and Ben Walther},
+title = {Web Security Testing Cookbook},
+publisher = {O'Reilly},
+year = {2008},
+edition = {1st}
+}
+
+@MISC{w3csop2013,
+author = {W3C},
+title = {Same-Origin Policy},
+note = {[Internet] (accessed 29-Nov-2013). Available at:},
+year = {2013},
+howpublished = "\url{http://www.w3.org/Security/wiki/Same_Origin_Policy}"
+}
+
+@MISC{cockcroftajaxLecture2012,
+author = {Douglas Crockford},
+title = {Ajax Security},
+note = {[Internet] (accessed 28-Nov-2013). Available at (ppt):},
+year = {2012},
+howpublished = "\url{javascript.crockford.com/security.ppt}"
+
+@MISC{bradford2013,
+author = {Michael Bradford},
+title = {XSS Hack Attack. {(A Lecture delivered at the National College of Ireland, August 2013)}},
+note = {[Internet] (accessed 28-Nov-2013). Available at (pdf):},
+year = {2013},
+howpublished = "\url{http://blackhat.azurewebsites.net/Docs/XSSHackAttack.pdf}"
+}
+
+@MISC{csrf2008,
+author = {William Zeller and Edward W. Felten},
+title = {Cross-Site Request Forgeries: Exploitation and Prevention},
+note = {[Internet] (accessed 28-Nov-2013). Available at (pdf):},
+year = {2008},
+howpublished = "\url{https://www.eecs.berkeley.edu/~daw/teaching/cs261-f11/reading/csrf.pdf}"
+}
+
+@Article{jacob1977,
+author = {Jacob, F},
+title = {Evolution and Tinkering},
+journal = {Science},
+year = {1977},
+pages = {1161-1166},
+
+volume = {196},
+note = {Available at (pdf):},
+howpublished = "\url{http://www.gvsu.edu/cms3/assets/6D2549F6-ED41-142A-2D7251DEDEE796B4/Evolution\%20and\%20tinkering.pdf}"
+
+}

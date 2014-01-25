@@ -1,0 +1,35 @@
+<h1>Listing orders</h1>
+
+<table>
+  <tr>
+    <th>Firstname</th>
+    <th>Lastname</th>
+    <th>Address</th>
+    <th>Email</th>
+    <th>Confirm email</th>
+    <th>Card number</th>
+    <th>Card type</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @orders.each do |order| %>
+  <tr>
+    <td><%= order.firstname %></td>
+    <td><%= order.lastname %></td>
+    <td><%= order.address %></td>
+    <td><%= order.email %></td>
+    <td><%= order.confirm_email %></td>
+    <td><%= order.card_number %></td>
+    <td><%= order.card_type %></td>
+    <td><%= link_to 'Show', order %></td>
+    <td><%= link_to 'Edit', edit_order_path(order) %></td>
+    <td><%= link_to 'Destroy', order, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Order', new_order_path %>

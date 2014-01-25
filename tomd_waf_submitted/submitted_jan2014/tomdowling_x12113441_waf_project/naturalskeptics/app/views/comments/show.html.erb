@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+<h3>Comment</h3>
+<div><%= @comment.text %></div>  <br/>
+
+<h3>Date Posted</h3>
+<div><%= @comment.date %></div><br/>
+
+<h3>User Id of Poster</h3>
+<div><%= @comment.user_id %></div>
+
+<h3>Time Since Posting</h3>
+
+<div><%= time_ago_in_words(@comment.created_at) %></div>
+
+<h3>User Name of Poster</h3>
+<div><%= @comment.uname%></div>
+ <br/>
+
+<div>
+  <%= link_to 'Back', comments_path , class: "button secondary tiny"%>
+</div> <br/>
+
+<div>
+  <%= link_to 'Go Comment Page',
+              discussion_path(@comment.discussion.id, anchor: 'comment'),
+              class: "button success tiny"   %>
+</div>
+
+
+

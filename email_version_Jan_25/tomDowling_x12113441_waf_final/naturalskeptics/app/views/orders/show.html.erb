@@ -1,0 +1,40 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Firstname:</b>
+  <%= @order.firstname %>
+</p>
+
+<p>
+  <b>Lastname:</b>
+  <%= @order.lastname %>
+</p>
+
+<p>
+  <b>Address:</b>
+  <%= @order.address %>
+</p>
+
+<p>
+  <b>Email:</b>
+  <%= @order.email %>
+</p>
+
+<p>
+  <b>Confirm email:</b>
+  <%= @order.confirm_email %>
+</p>
+
+<p>
+  <b>Card number:</b>
+  <%= @order.card_number %>
+</p>
+
+<p>
+  <b>Card type:</b>
+  <%= @order.card_type %>
+</p>
+
+
+<%= link_to 'Edit', edit_order_path(@order) %> |
+<%= link_to 'Back', orders_path %>
