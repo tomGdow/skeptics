@@ -1,0 +1,132 @@
+[
+    {
+        "category": "Protein",
+        "created_at": "2013-12-18T01:49:55Z",
+        "description": "An oxygen carrying protein found in blood and other organs",
+        "id": 1,
+        "image_url": "motorola-xoom.0.jpg",
+        "name": "Haemoglobin",
+        "price": 100.0,
+        "updated_at": "2013-12-18T11:36:04Z"
+    },
+    {
+        "category": "Enzyme",
+        "created_at": "2013-12-18T10:19:30Z",
+        "description": "An enzyme that catalyzes the breakdown of alcohol in the liver.  Stops you getting drunk too quickly! ",
+        "id": 2,
+        "image_url": "magnolia.jpg",
+        "name": "Alcohol dehydrogenase",
+        "price": 45.0,
+        "updated_at": "2013-12-18T12:10:21Z"
+    },
+    {
+        "category": "Book",
+        "created_at": "2013-12-18T11:42:43Z",
+        "description": "The Pickaxe book by Dave Thomas, named for the tool on the cover, is the definitive reference to Ruby, a highly-regarded, fully object-oriented programming language. This Second Edition has more than 200 pages of new content, and substantial enhancements to the original, covering all the new and improved language features of Ruby 1.8 and standard library modules.",
+        "id": 3,
+        "image_url": "ruby.jpg",
+        "name": "Programming Ruby",
+        "price": 33.0,
+        "updated_at": "2013-12-18T12:21:15Z"
+    },
+    {
+        "category": "Enzyme",
+        "created_at": "2013-12-18T12:12:08Z",
+        "description": "An enzyme that catalyzes the breakdown of amines in brain.  Inhibitors of the enzyme act as anti-depressants",
+        "id": 4,
+        "image_url": "dog.jpg",
+        "name": "Monoamine oxidase",
+        "price": 100.0,
+        "updated_at": "2013-12-18T12:12:08Z"
+    },
+    {
+        "category": "Book",
+        "created_at": "2013-12-18T12:15:30Z",
+        "description": "Rails Test Prescriptions by by Noel Rappin is a comprehensive guide to testing Rails applications, covering Test-Driven Development from both a theoretical perspective (why to test) and from a practical perspective (how to test effectively). It covers the core Rails testing tools and procedures for Rails 2 and Rails 3, and introduces popular add-ons, including RSpec, Shoulda, Cucumber, Factory Girl, and Rcov.",
+        "id": 5,
+        "image_url": "rtp.jpg",
+        "name": "Rails Test Prescriptions",
+        "price": 45.0,
+        "updated_at": "2013-12-18T12:16:44Z"
+    },
+    {
+        "category": "Enzyme",
+        "created_at": "2013-12-18T12:22:40Z",
+        "description": "A digestive enzyme responsible for the breakdown of food",
+        "id": 6,
+        "image_url": "sheep.jpg",
+        "name": "Trypsin",
+        "price": 145.0,
+        "updated_at": "2013-12-18T12:22:40Z"
+    },
+    {
+        "category": "Book",
+        "created_at": "2013-12-18T12:29:13Z",
+        "description": "CoffeeScript: Accelerated JavaScript Development by Trevor Burnham is JavaScript done right. It provides all of JavaScript\u2019s functionality wrapped in a cleaner, more succinct syntax. In the first book on this exciting new language, CoffeeScript guru Trevor Burnham shows you how to hold onto all the power and flexibility of JavaScript while writing clearer, cleaner, and safer code",
+        "id": 7,
+        "image_url": "cs.jpg",
+        "name": "CoffeeScript",
+        "price": 44.0,
+        "updated_at": "2013-12-18T12:32:00Z"
+    },
+    {
+        "category": "Book",
+        "created_at": "2013-12-18T12:35:10Z",
+        "description": "Agile Web Development with Rails 4 by Sam Ruby. Rails just keeps on changing. Both Rails 3 and 4, as well as Ruby 1.9 and 2.0, bring hundreds of improvements, including new APIs and substantial performance enhancements. The fourth edition of this award-winning classic has been reorganized and refocused so it\u2019s more useful than ever before for developers new to Ruby and Rails.\r\n\r\nRails 4 introduces a number of user-facing changes, and the book has been updated to match all the latest changes and new best practices in Rails. This includes full support for Ruby 2.0, controller concerns, Russian Doll caching, strong parameters, Turbolinks, new test and bin directory layouts, and much more.",
+        "id": 8,
+        "image_url": "rails4.jpg",
+        "name": "Agile Web Development",
+        "price": 33.0,
+        "updated_at": "2013-12-18T12:41:04Z"
+    },
+    {
+        "category": "Protein",
+        "created_at": "2013-12-18T12:44:08Z",
+        "description": "A protein which occurs in brain and is the main component of one of the lesions of Alzheimers's brain",
+        "id": 9,
+        "image_url": "coll7.gif",
+        "name": "Tau",
+        "price": 454.0,
+        "updated_at": "2013-12-18T12:44:08Z"
+    },
+    {
+        "category": "General",
+        "created_at": "2013-12-18T12:49:32Z",
+        "description": "A flower photogaphed at the Botanic Gardens (picture)",
+        "id": 10,
+        "image_url": "slipper_orchid.jpg",
+        "name": "Slipper Orchid",
+        "price": 34.0,
+        "updated_at": "2013-12-18T12:50:05Z"
+    },
+    {
+        "category": "Protein",
+        "created_at": "2013-12-18T12:51:40Z",
+        "description": "A protein isolated from egg white ",
+        "id": 11,
+        "image_url": "snowdrop.jpg",
+        "name": "Ovalbumin",
+        "price": 45.0,
+        "updated_at": "2013-12-18T12:51:40Z"
+    },
+    {
+        "category": "General",
+        "created_at": "2013-12-18T12:53:17Z",
+        "description": "A picture of a flower photographed at the Botanic Gardens, Dublin",
+        "id": 12,
+        "image_url": "tulip2.jpg",
+        "name": "Tulip",
+        "price": 33.0,
+        "updated_at": "2013-12-22T16:26:57Z"
+    },
+    {
+        "category": "protein",
+        "created_at": "2014-01-25T16:17:33Z",
+        "description": "a copper enzyme from plasma",
+        "id": 27,
+        "image_url": "dog.jpg",
+        "name": "diamine oxidase",
+        "price": 222.0,
+        "updated_at": "2014-01-25T16:18:58Z"
+    }
+]

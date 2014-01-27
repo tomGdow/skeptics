@@ -4,7 +4,7 @@ class JscalcController < ApplicationController
 
     respond_to do |format|
       format.js
-      format.json { render json: @commodities }
+      format.json {render json: @commodities}
       format.html
     end
   end

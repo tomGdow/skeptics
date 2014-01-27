@@ -29,7 +29,7 @@
         <td><%= commodity.category %></td>
         <td><%= image_tag(commodity.image_url,
                           title: 'Add to Cart',
-                          class: 'links_list') %></td>
+                          class: 'links_list')%></td>
         <td>
           <% if current_user and current_user.admin %>
               <!--show dropdown only if admin logged in-->
@@ -63,6 +63,7 @@
 </table>
 
 <%= render partial: 'commodities/search_and_paginate' %>
+
 
     <% if current_user and current_user.admin %>
     <%= link_to 'New Commodity', new_commodity_path,

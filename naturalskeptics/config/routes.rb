@@ -1,5 +1,7 @@
 Naturalskeptics::Application.routes.draw do
 
+  get "products/index"
+
   get "pages/home"
 
   get "pages/contact"
@@ -18,6 +20,7 @@ Naturalskeptics::Application.routes.draw do
   resources :comments
   resources :discussions
   resources :users
+  resources :products
 
   resources :discussions do
     resources :comments
@@ -32,6 +35,7 @@ Naturalskeptics::Application.routes.draw do
   match '/mygems' => "home#mygems", :as => "mygems"
   match '/your_cart' => "carts#your_cart", :as => "your_cart"
   match '/carts/remove/:id' => 'line_items#destroy'
+  match '/indexnew' => "commodities#indexnew"
 
   root :to => 'home#index'
 

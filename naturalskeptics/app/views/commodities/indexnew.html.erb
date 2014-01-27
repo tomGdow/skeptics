@@ -1,0 +1,55 @@
+<p id="notice"><%= notice %></p>
+<h1>Listing commodities</h1>
+
+<div>
+  <div>
+    <div>
+<!--Search Functionality-->
+      Search: <input ng-model="query"> </br>
+      Sort by:
+      <select ng-model="orderProp">
+        <option value="name">Alphabetical</option>
+        <option value="category">Newest</option>
+      </select>
+    </div>
+
+    <div>
+<!--Table of Products-->
+      <ul>
+        <li ng-repeat="product in phones | filter:query | orderBy:orderProp" class="thumbnails">
+
+          <table class="jsonTable">
+            <tr>
+              <td><img ng-src="assets/{{product.image_url}} "></td>
+              <td><a href="commodities/{{product.id}}" data-remote="true">{{product.name}}</a></td>
+              <td>{{product.price}}</td>
+              <td><p>{{product.category}} </p></td>
+              <td><a href="/commodities/{{product.id}}"
+                     class="button secondary tiny" data-remote="true">Show</a></td>
+
+              <% if current_user and current_user.admin %>
+                  <td><a href="/commodities//{{product.id}}/edit" data-remote="true"
+                         class="button success tiny">Edit</a></td>
+                  <td><a href="/commodities/{{product.id}}" data-confirm="Are you sure?"
+                         data-method="delete"
+                         rel="nofollow" class="button alert tiny">Destroy</a></td>
+              <% end %>
+             <tr>
+                <% if current_user %>
+                    <td>
+                      <a class="button success tiny 5 radius "
+                         rel="nofollow" data-remote="true"
+                         data-method="post"
+                         href="/line_items?commodity_id={{product.id}}">Add
+                        to Cart</a>
+                    </td>
+                <% end %>
+              </tr>
+           </table>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+

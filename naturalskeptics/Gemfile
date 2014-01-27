@@ -12,6 +12,7 @@ gem "nokogiri", "~> 1.6.1"
 gem 'faker'
 gem "gravatar_image_tag"
 gem "paperclip", "~> 3.0"
+gem 'angularjs-rails'
 
 group :development do
   gem 'rspec-rails'

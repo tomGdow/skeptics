@@ -389,6 +389,17 @@
     <lastSignInIP>127.0.0.1</lastSignInIP>
   </myUsers>
   <myUsers>
+    <email>suzydow@gmail.com</email>
+    <userID>95</userID>
+    <createdAT>25 Jan. 2014</createdAT>
+    <updatedAT>25 Jan. 2014</updatedAT>
+    <signInCount>1</signInCount>
+    <currSignInAt>25 Jan. 2014</currSignInAt>
+    <lastSignInAt>25 Jan. 2014</lastSignInAt>
+    <currSignInIP>127.0.0.1</currSignInIP>
+    <lastSignInIP>127.0.0.1</lastSignInIP>
+  </myUsers>
+  <myUsers>
     <email>thomasgdowling@gmail.com</email>
     <userID>51</userID>
     <createdAT>25 Dec. 2013</createdAT>

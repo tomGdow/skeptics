@@ -30,12 +30,16 @@ class RegistrationsController < Devise::RegistrationsController
               @user.last_sign_in_ip,
               File.join(Rails.root, 'public', 'xmlNewUsers.xml')
         )
+
+        TGD.write_users_to_json
       end
   end
 
   def update
     super
     @cart = current_cart
+
+    TGD.write_users_to_json
   end
 
   def edit

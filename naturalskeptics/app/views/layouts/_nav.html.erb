@@ -41,6 +41,14 @@
         <%= link_to "Gems", mygems_path, :class => "ajaxClass" %>
       </li>
 
+      <li>
+        <%= link_to "Products", products_path%>
+      </li>
+
+      <li>
+        <%= link_to "Indexnew","indexnew"%>
+      </li>
+
       <% if  current_user.present?%>
 
       <li>
@@ -74,6 +82,8 @@
           </li>
           <li><%= link_to "Comments", comments_path, remote: true %></li>
       <% end %>
+
+
     </ul>
   </section>
 </nav>

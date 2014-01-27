@@ -68,4 +68,15 @@ module TGD
     File.open(myfile, 'w+') { |f| f.write(xml_string) }
     File.open(myfile, 'w') { |f| f.write(xml_string) }
   end
+
+  def self.write_users_to_json
+    File.open(File.join(Rails.root,
+
+                        'public', 'skepticsUsers.json'), "w+") { |f| f.write(User.all.to_json) }
+  end
+
+  def self.write_commodities_to_json
+    File.open(File.join(Rails.root,
+                        'public', 'products.json'), "w+") { |f| f.write(Commodity.all.to_json) }
+    end
 end

@@ -1,5 +1,7 @@
 class CommoditiesController < ApplicationController
 
+  require 'xmlfunctions'
+
   def index
     @cart=current_cart
     @commodities = Commodity.paginate(:per_page => 5,
@@ -14,7 +16,25 @@ class CommoditiesController < ApplicationController
     end
   end
 
+  def indexnew
+    @cart=current_cart
+
+
+    @commodities = Commodity.paginate(:per_page => 5,
+                                      :page => params[:page],
+                                      :order => "created_at DESC")
+    .search(params[:search_query], params[:search])
+
+    respond_to do |format|
+      #format.js
+      format.json { render json: @commodities }
+      format.html
+    end
+  end
+
   def show
+
+    @cart = current_cart
     @commodity = Commodity.find(params[:id])
 
     respond_to do |format|
@@ -57,6 +77,10 @@ class CommoditiesController < ApplicationController
         format.json { render json: @commodity.errors,
                              status: :unprocessable_entity }
       end
+
+      if @commodity.save
+        TGD.write_commodities_to_json
+      end
     end
   end
 
@@ -73,6 +97,7 @@ class CommoditiesController < ApplicationController
         format.json { render json: @commodity.errors,
                              status: :unprocessable_entity }
       end
+      TGD.write_commodities_to_json
     end
   end
 
@@ -83,6 +108,10 @@ class CommoditiesController < ApplicationController
     respond_to do |format|
       format.html { redirect_to commodities_url }
       format.json { head :no_content }
+
+
+      TGD.write_commodities_to_json
+
     end
   end
 end
