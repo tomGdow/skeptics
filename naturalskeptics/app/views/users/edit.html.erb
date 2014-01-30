@@ -1,0 +1,42 @@
+<section id ="mainDiv"><!-- begin Main Div -->
+<h1>Edit User (Administrator)</h1>
+
+<%= form_for(@user) do |f| %>
+    <% if @user.errors.any? %>
+        <div id="errorExplanation">
+          <h2><%= pluralize(@user.errors.count, "error") %>
+            prohibited this user from being saved:</h2>
+          <ul>
+            <% @user.errors.full_messages.each do |msg| %>
+                <li><%= msg %></li>
+            <% end %>
+          </ul>
+        </div>
+    <% end %>
+
+      <div class="field">
+        <%= (f.file_field :foto)%>
+      </div>
+    <div class="field">
+      <%= f.label :email %>
+      <br/>
+      <%= f.text_field :email %>
+    </div>
+
+    <div class="actions">
+      <%= f.submit :class => "button  success "%>
+    </div>
+ <% end %>
+   <br/>
+  <% if current_user && current_user.admin %>
+  <table><tr>
+   <td><%= link_to 'Profile', @user, class: "button secondary tiny" %></td>
+    <td><%= link_to 'Users/Json', users_path, class: "button secondary tiny" %></td>
+    <td><%= link_to "Users/admin", "/indextwo", class: "button secondary tiny"%></td>
+  </tr></table>
+  <% end %>
+
+
+
+
+</section><!-- end Main Div -->

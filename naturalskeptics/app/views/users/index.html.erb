@@ -1,0 +1,71 @@
+<p id="notice"><%= notice %></p>
+<h1>Listing Users (Json)</h1>
+
+<div>
+  <div>
+    <div>
+      <!--Search Functionality-->
+
+      <h4>Search</h4>
+      <input ng-model="query"
+                             placeholder="Search"
+                             id = "ngsearch"
+                             class="large-12 rows"> </br> </br>
+      <h4>Sort by</h4>
+      <select ng-model="orderPropAlt">
+        <option value="email">Email</option>
+
+        <% if current_user and current_user.admin %>
+            <option value="-created_at">Created at</option>
+            <option value="-updated_at">Updated at</option>
+            <option value="-id">id</option>
+        <% end %>
+      </select>
+    </div>
+
+    <div>
+      <!--Table of Products-->
+      <ul>
+        <li class = "jsonli" ng-repeat="myuser in userlist | filter:query | orderBy:orderPropAlt">
+
+          <table class="jsonTable">
+            <tr>
+              <td rowspan="2">  <figure class ="tablefigure">
+                <img ng-src="/system/users/fotos/000/000/0{{myuser.id}}/thumb/{{myuser.foto_file_name}}">
+                <figcaption>{{mySplit(myuser.email)}}</figcaption>
+              </figure>
+              </td>
+
+              <td>
+                <a href= "/users/{{myuser.id}}">{{myuser.id}}</a>
+              </td>
+
+              <td>
+                <a href= "/users/{{myuser.id}}">{{myuser.email}}</a>
+              </td>
+
+              <td title ="created at">
+                {{myuser.created_at | date:'MM/dd/yyyy @ h:mma'}}
+              </td>
+              <td title ="updated at">
+                {{myuser.updated_at | date:'MM/dd/yyyy @ h:mma'}}
+              </td>
+            </tr>
+            <tr>
+              <td>Admin:<br/>{{myuser.admin}}</td>
+              <td>{{myuser.foto_file_size}}</td>
+              <td><a href="/users/{{myuser.id}}/edit" class="button success tiny">Edit</a></td>
+              <td><a href="/users/{{myuser.id}}"
+                     class="button alert tiny"
+                     data-confirm="Are you sure?"
+                     data-method="delete"
+                     rel="nofollow">Destroy</a></td>
+            </tr>
+          </table>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+

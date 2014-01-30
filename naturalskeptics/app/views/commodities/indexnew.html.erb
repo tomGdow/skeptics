@@ -1,55 +1,97 @@
 <p id="notice"><%= notice %></p>
-<h1>Listing commodities</h1>
+<h1>Listing commodities (Json)</h1>
 
 <div>
   <div>
     <div>
-<!--Search Functionality-->
-      Search: <input ng-model="query"> </br>
-      Sort by:
+      <!--Search Functionality-->
+
+      <h4>Search</h4> <input ng-model="query"
+                             placeholder="Search"
+                             id = "ngsearch"
+                             class="large-12 rows"> </br> </br>
+      <h4>Sort by</h4>
       <select ng-model="orderProp">
         <option value="name">Alphabetical</option>
-        <option value="category">Newest</option>
+        <option value="price">Lowest Price</option>
+        <option value="-price">Highest Price</option>
+        <option value="category">Category</option>
+           <% if current_user and current_user.admin %>
+        <option value="-created_at">Created at</option>
+        <option value="-updated_at">Updated at</option>
+        <option value="-id">id</option>
+           <% end %>
       </select>
     </div>
 
     <div>
-<!--Table of Products-->
+      <!--Table of Products-->
       <ul>
-        <li ng-repeat="product in phones | filter:query | orderBy:orderProp" class="thumbnails">
+        <li class = "jsonli" ng-repeat="product in commodities | filter:query | orderBy:orderProp">
 
           <table class="jsonTable">
             <tr>
-              <td><img ng-src="assets/{{product.image_url}} "></td>
-              <td><a href="commodities/{{product.id}}" data-remote="true">{{product.name}}</a></td>
-              <td>{{product.price}}</td>
-              <td><p>{{product.category}} </p></td>
-              <td><a href="/commodities/{{product.id}}"
-                     class="button secondary tiny" data-remote="true">Show</a></td>
-
+              <td><div class= "imageDrag"><img ng-src="assets/{{product.image_url}} " ></div></td>
+              <td title = "Name">
+                <a href="commodities/{{product.id}}" data-remote="true">{{product.name}}</a>
+              </td>
               <% if current_user and current_user.admin %>
-                  <td><a href="/commodities//{{product.id}}/edit" data-remote="true"
-                         class="button success tiny">Edit</a></td>
-                  <td><a href="/commodities/{{product.id}}" data-confirm="Are you sure?"
-                         data-method="delete"
-                         rel="nofollow" class="button alert tiny">Destroy</a></td>
-              <% end %>
+              <td title = "Cost Price" >{{(product.price) | currency:"&euro;"}}</td>
+               <% end %>
+              <td title = "Sales Price" >{{ markup(product.price) | currency:"&euro;" }}</td>
+              <td title = "Category">{{product.category}}</td>
+
+              <% unless current_user.try(:admin?) %>
+                  <td><a href="/commodities/{{product.id}}"
+                         class="button secondary tiny" data-remote="true">Show</a></td>
+                  <% end %>
+            </tr>
+
+            <% if current_user and current_user.admin %>
+
              <tr>
+               <td title ="id">{{product.id}}</td>
+                <td title ="created at">
+                  {{product.created_at | date:'MM/dd/yyyy @ h:mma'}}
+                </td>
+               <td title ="updated at">
+                 {{product.updated_at | date:'MM/dd/yyyy @ h:mma'}}
+               </td>
+             </tr>
+          <% end %>
+            <tr>
                 <% if current_user %>
                     <td>
-                      <a class="button success tiny 5 radius "
+                      <a class="button  tiny 5 radius "
                          rel="nofollow" data-remote="true"
                          data-method="post"
-                         href="/line_items?commodity_id={{product.id}}">Add
-                        to Cart</a>
+                         href="/line_items?commodity_id={{product.id}}">
+                        Add to Cart</a>
                     </td>
                 <% end %>
-              </tr>
-           </table>
+
+              <% if current_user and current_user.admin %>
+              <td>
+                <a href="/commodities/{{product.id}}"
+                     class="button secondary tiny" data-remote="true">Show</a>
+              </td>
+                  <td>
+                    <a href="/commodities//{{product.id}}/edit" data-remote="true"
+                         class="button success tiny">Edit</a>
+                  </td>
+                  <td>
+                    <a href="/commodities/{{product.id}}" data-confirm="Are you sure?"
+                         data-method="delete"
+                         rel="nofollow" class="button alert tiny">Destroy</a>
+                  </td>
+              <% end %>
+            </tr>
+          </table>
         </li>
       </ul>
     </div>
   </div>
 </div>
 
-
+<div class= "imageDrag"><%= link_to image_tag( "marie_curie.jpg", alt: "Image of Marie Curie"),
+                                    "http://www.nobelprize.org/nobel_prizes/physics/laureates/1903/", target: "_blank" %></div>

@@ -42,4 +42,17 @@ class User < ActiveRecord::Base
 
   has_many :discussions
   has_many :comments
+
+  def self.search search_query
+
+    if search_query
+      find :all, conditions: ["email LIKE ?",
+                              "%#{search_query}%"]
+    else
+      find :all
+    end
+  end
+
+
+
 end

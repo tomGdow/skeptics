@@ -118,24 +118,24 @@
 }
 
 
-.phones {
+.jsonli {margin-left: 0;
   list-style: none;
 }
 
-.thumb {
+/*.thumb {
   float: left;
   margin: -1em 1em 1.5em 0em;
   padding-bottom: 1em;
   height: 100px;
   width: 100px;
-}
-
-.phones li {
-  clear: both;
-  height: 100px;
-  padding-top: 15px;
-}
+}*/
 
 table.jsonTable  td, tr {
-  width: 100px;
+  width: 150px;
 }
+
+ #ngsearch{height: 40px;}
+
+.tablefigure{padding: 0;
+  padding-left: 2px;
+ margin: 0;}

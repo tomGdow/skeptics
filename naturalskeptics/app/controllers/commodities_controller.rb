@@ -87,6 +87,7 @@ class CommoditiesController < ApplicationController
   def update
     @commodity = Commodity.find(params[:id])
 
+
     respond_to do |format|
       if @commodity.update_attributes(params[:commodity])
         format.html { redirect_to @commodity,
@@ -109,8 +110,7 @@ class CommoditiesController < ApplicationController
       format.html { redirect_to commodities_url }
       format.json { head :no_content }
 
-
-      TGD.write_commodities_to_json
+     # TGD.write_commodities_to_json
 
     end
   end

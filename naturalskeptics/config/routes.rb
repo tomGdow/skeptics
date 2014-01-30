@@ -1,12 +1,7 @@
 Naturalskeptics::Application.routes.draw do
 
-  get "products/index"
-
   get "pages/home"
-
   get "pages/contact"
-
-  get "jscalc/index"
 
   devise_for :users, :controllers => {:registrations => "registrations"}
 
@@ -35,7 +30,10 @@ Naturalskeptics::Application.routes.draw do
   match '/mygems' => "home#mygems", :as => "mygems"
   match '/your_cart' => "carts#your_cart", :as => "your_cart"
   match '/carts/remove/:id' => 'line_items#destroy'
-  match '/indexnew' => "commodities#indexnew"
+  match '/indexnew' => "commodities#indexnew", :as =>  "indexnew"
+  match '/indextwo' => "users#indextwo", :as =>  "indextwo"
+
+
 
   root :to => 'home#index'
 

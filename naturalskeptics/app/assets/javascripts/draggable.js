@@ -4,5 +4,7 @@ $(dragDiv);
 function dragDiv() {
     $('#cart').draggable();
     $('#userPicker').draggable();
+    $('.imageDrag').draggable();
 
 }
+

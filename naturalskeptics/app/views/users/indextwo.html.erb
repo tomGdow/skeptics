@@ -1,0 +1,51 @@
+<section id ="mainDiv"><!-- begin Main Div -->
+
+  <h1>Listing Users </h1>
+  <table>
+    <tr>
+      <th>Email</th>
+      <th>Admin</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+    <% @users.each do |user| %>
+        <tr>
+          <td><figure class ="tablefigure">
+            <%= image_tag user.foto.url(:thumb) %>
+            <figcaption><%= user.email.split('@').first%></figcaption>
+          </figure></td>
+          <td><%= user.email %></td>
+          <td><%= link_to 'Profile', user, class: "button secondary tiny" %></td>
+          <td><%= link_to'Edit', edit_user_path(user),
+                          class: "button success tiny" %></td>
+          <td><%= link_to 'Destroy', user,
+                          :confirm => 'Are you sure?',
+                          :method => :delete,
+                          :class => "button alert tiny" %></td>
+        </tr>
+    <% end %>
+  </table>
+  <br />
+
+  <div class="flickr_pagination">
+    <div class="page_info">
+      <%= page_entries_info @users %>
+    </div>  <br/>
+    <%= will_paginate @users%>
+  </div>
+  <br/>
+  <div id="searchbutton" class="controls">
+    <%= form_tag "/indextwo", :method => 'get' do %>
+        <p>
+          <%= text_field_tag :search_query, params[:search_query] %>  &nbsp;
+          <%= submit_tag "Search", :name => nil, class: "button" %>
+          <br/>
+          <br/>
+        </p>
+    <% end %>
+  </div>
+  <div id="searchbutton" class="controls">
+  </div>
+</section><!-- end Main Div -->
+

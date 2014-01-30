@@ -75,9 +75,9 @@
         "description": "Agile Web Development with Rails 4 by Sam Ruby. Rails just keeps on changing. Both Rails 3 and 4, as well as Ruby 1.9 and 2.0, bring hundreds of improvements, including new APIs and substantial performance enhancements. The fourth edition of this award-winning classic has been reorganized and refocused so it\u2019s more useful than ever before for developers new to Ruby and Rails.\r\n\r\nRails 4 introduces a number of user-facing changes, and the book has been updated to match all the latest changes and new best practices in Rails. This includes full support for Ruby 2.0, controller concerns, Russian Doll caching, strong parameters, Turbolinks, new test and bin directory layouts, and much more.",
         "id": 8,
         "image_url": "rails4.jpg",
-        "name": "Agile Web Development",
+        "name": "Agile Web Development with Rails",
         "price": 33.0,
-        "updated_at": "2013-12-18T12:41:04Z"
+        "updated_at": "2014-01-28T17:48:53Z"
     },
     {
         "category": "Protein",
@@ -118,15 +118,5 @@
         "name": "Tulip",
         "price": 33.0,
         "updated_at": "2013-12-22T16:26:57Z"
-    },
-    {
-        "category": "protein",
-        "created_at": "2014-01-25T16:17:33Z",
-        "description": "a copper enzyme from plasma",
-        "id": 27,
-        "image_url": "dog.jpg",
-        "name": "diamine oxidase",
-        "price": 222.0,
-        "updated_at": "2014-01-25T16:18:58Z"
     }
 ]

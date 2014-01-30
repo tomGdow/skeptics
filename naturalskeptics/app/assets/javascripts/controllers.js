@@ -2,25 +2,30 @@
 
 /* Controllers */
 
-/*var skepticsApp = angular.module('skepticsApp', []);
+var skepticsApp = angular.module('skepticsApp', []);
 
-skepticsApp.controller('ProductsListCtrl', function($scope, $http) {
-    $http.get('products/products.json').success(function(data) {
-        $scope.products = data;
+skepticsApp.controller('SkepticsCtrl', function($scope, $http) {
+
+    $http.get('skepticsCommodities.json').success(function(data) {
+        $scope.commodities = data;
+    });
+
+
+    $http.get('skepticsUsers.json').success(function(data) {
+        $scope.userlist = data;
     });
 
     $scope.orderProp = 'name';
-});*/
+    $scope.orderPropAlt = 'email';
+    $scope.markup = function(arg) {return arg + 0.45 * arg};
 
+    $scope.mySplit = function(string) {
 
-var phonecatApp = angular.module('phonecatApp', []);
-
-phonecatApp.controller('PhoneListCtrl', function($scope, $http) {
-    $http.get('phones/phones.json').success(function(data) {
-        $scope.phones = data;
-    });
-
-    $scope.orderProp = 'name';
-
+        return  string.split('@')[0]
+    }
 
 });
+
+
+
+

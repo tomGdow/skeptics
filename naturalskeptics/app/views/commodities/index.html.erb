@@ -38,7 +38,7 @@
               <br/>
               <ul id="drop" data-dropdown-content class="f-dropdown">
 
-                <li><%= link_to 'Show', commodity, remote: true %></li>
+                <li><%= link_to 'Show', commodity, remote: true%></li>
                 <li><%= link_to 'Edit', edit_commodity_path(commodity), remote: true %></li>
                 <li><%= link_to 'Destroy',
                                 commodity,
@@ -63,7 +63,6 @@
 </table>
 
 <%= render partial: 'commodities/search_and_paginate' %>
-
 
     <% if current_user and current_user.admin %>
     <%= link_to 'New Commodity', new_commodity_path,
